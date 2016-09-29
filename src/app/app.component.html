@@ -1,3 +1,68 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-8 offset-xs-2">
+      <div class="jumbotron text-xs-center">
+        <h1 class="display-3">ng2-adsense</h1>
+        <p class="lead">Simple adsense component for Angular 2</p>
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" href="https://github.com/scttcper/ng2-adsense" role="button">GitHub</a>
+          <a class="btn btn-danger btn-lg" href="#" role="button">NPM</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-8 offset-xs-2">
+      <h3>Preview:</h3>
+      <p>Demo of ad reloading per route. Sometimes a blank ad is displayed.</p>
+      <ul class="nav nav-inline">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="1" routerLinkActive="active">Page 1</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="2" routerLinkActive="active">Page 2</a>
+        </li>
+      </ul>
+      <router-outlet></router-outlet>
+      <hr>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-8 offset-xs-2">
+      <h4>1. Install</h4>
+      <p>
+        <code>npm install ng2-adsense --save</code>
+      </p>
+
+      <h4>2. Place Code</h4>
+      <p>Use the standard adsense code somewhere on your index.html</p>
+      <p>
+        <code>
+          &lt;script async src=//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js>&lt;/script>
+        </code>
+      </p>
+
+      <h4>3. Add to NgModule</h4>
+      <p>Add AdsenseModule to the imports of your NgModule</p>
+      <p>
+        <code>
+          import {{ '{' }} AdsenseModule {{ '}' }} from 'ng2-adsense';
+        </code>
+      </p>
+
+      <h4>4. Use</h4>
+      <p></p>
+      <p>
+        <code>
+          &lt;ng2-adsense [adClient]="'ca-pub-7640562161899788'" [adSlot]="7259870550">&lt;/ng2-adsense>
+        </code>
+      </p>
+    </div>
+  </div>
+</div>

@@ -1,22 +1,35 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, Input, AfterViewInit, NgModule } from '@angular/core';
 
 declare var adsbygoogle: any;
 
 @Component({
-  selector: 'adsense-component',
+  selector: 'ng2-adsense',
   template: `
-  <ins class="adsbygoogle"
-    style="display:inline-block;width:330px;height:120px"
-    data-ad-client="my_client_number"
-    data-ad-slot="my_ad_slot_number">
-  </ins>
+  <div style="padding-bottom:8px;">
+    <ins class="adsbygoogle"
+      style="display:block;"
+      [attr.data-ad-client]="adClient"
+      [attr.data-ad-slot]="adSlot"
+      [attr.data-ad-format]="adFormat"
+      [attr.data-ad-region]="adRegion">
+    </ins>
+  </div>
   `,
 })
 export class AdsenseComponent implements AfterViewInit {
-
+  @Input() adClient: string;
+  @Input() adSlot: string | number;
+  @Input() adFormat: string = 'auto';
+  @Input() adRegion = 'page-' + Math.floor(Math.random() * 100000) + 1;
   ngAfterViewInit() {
     try {
       (adsbygoogle = window['adsbygoogle'] || []).push({});
     } catch (e) {}
   }
 }
+
+@NgModule({
+  exports: [AdsenseComponent],
+  declarations: [AdsenseComponent],
+})
+export class AdsenseModule { }
