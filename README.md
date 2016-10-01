@@ -16,17 +16,12 @@ Use the standard adsense code somewhere on your index.html
 ```
 ### 3. Add to NgModule
 Add AdsenseModule to the imports of your NgModule
-```javascript
+```typescript
 import { AdsenseModule } from 'ng2-adsense';
 @NgModule({
-  declarations: [
-    AppComponent,
-    PageComponent,
-    OtherPageComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(AppRoutes, {useHash: true}),
     AdsenseModule, // <--- Add to imports
   ],
   providers: [],
