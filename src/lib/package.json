@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/scttcper/ng2-adsense",
   "peerDependencies": {
-    "@angular/core": "^2.0.0",
+    "@angular/core": "^2.0.0"
   }
 }
