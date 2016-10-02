@@ -1,0 +1,25 @@
+{
+  "name": "ng2-adsense",
+  "version": "0.0.1",
+  "description": "Adsense for Angular 2",
+  "main": "./ng2-adsense.js",
+  "typings": "./ng2-adsense.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/scttcper/ng2-adsense.git"
+  },
+  "keywords": [
+    "ng2",
+    "angular2",
+    "adsense",
+    "adwords"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/scttcper/ng2-adsense/issues"
+  },
+  "homepage": "https://github.com/scttcper/ng2-adsense",
+  "peerDependencies": {
+    "@angular/core": "^2.0.0",
+  }
+}
