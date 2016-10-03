@@ -6,7 +6,12 @@ import { PageComponent, OtherPageComponent } from './page.component';
 const routes: Routes = [
   { path: '1', component: PageComponent },
   { path: '2', component: OtherPageComponent },
-  { path: '**', component: PageComponent },
+  // { path: '**', component: PageComponent },
+  {
+    path: '**',
+    redirectTo: '1',
+    pathMatch: 'full'
+  },
 ];
 
 
