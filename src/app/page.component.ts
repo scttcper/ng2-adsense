@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: `
   <p class="text-xs-center">Current View: {{title}}</p>
-  <ng2-adsense [adClient]="'ca-pub-7640562161899788'" [adSlot]="7259870550"></ng2-adsense>
+  <ng2-adsense [adClient]="'ca-pub-7640562161899788'" [adSlot]="2930227358"></ng2-adsense>
   `,
 })
 export class PageComponent {
@@ -16,7 +16,7 @@ export class PageComponent {
   selector: 'app-root',
   template: `
   <p class="text-xs-center">Current View: {{title}}</p>
-  <ng2-adsense [adClient]="'ca-pub-7640562161899788'" [adSlot]="7259870550"></ng2-adsense>
+  <ng2-adsense [adClient]="'ca-pub-7640562161899788'" [adSlot]="2930227358"></ng2-adsense>
   `,
 })
 export class OtherPageComponent extends PageComponent {
