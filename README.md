@@ -5,9 +5,7 @@
 [npm-url]: https://npmjs.org/package/ng2-adsense
 
 ### 1. Install
-```bash
-npm install ng2-adsense --save
-```
+`npm install ng2-adsense --save`
 
 ### 2. Place Code
 Use the standard adsense code somewhere on your index.html
@@ -31,5 +29,8 @@ export class AppModule { }
 ```
 ### 4. Use
 ```html
-<ng2-adsense [adClient]="'ca-pub-7640562161899788'" [adSlot]="7259870550"><ng2-adsense>
+<ng2-adsense
+  [adClient]="'ca-pub-7640562161899788'"
+  [adSlot]="7259870550">
+</ng2-adsense>
 ```
