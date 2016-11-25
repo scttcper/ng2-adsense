@@ -1,10 +1,16 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { Ng2AdsenseRoutingModule } from './app-routing.module';
 import { PageComponent, OtherPageComponent } from './page.component';
 import { AdsenseModule } from '../lib/ng2-adsense';
+
+const routes: Routes = [
+  { path: '1', component: PageComponent },
+  { path: '2', component: OtherPageComponent },
+  { path: '**', redirectTo: '1', pathMatch: 'full' },
+];
 
 @NgModule({
   declarations: [
@@ -13,10 +19,9 @@ import { AdsenseModule } from '../lib/ng2-adsense';
   ],
   imports: [
     BrowserModule,
+    RouterModule.forRoot(routes),
     AdsenseModule,
-    Ng2AdsenseRoutingModule,
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
