@@ -5,25 +5,16 @@ set -exu
 # into the ./deploy folder. This script should be run from the root of the project
 
 # Clear dist/ and deploy/ so that we guarantee there are no stale artifacts.
-rm -rf ./dist/out-tsc
-rm -rf ./deploy
+rm -rf dist
+rm -rf deploy
 
 # compile src directory and create d.ts files
-./node_modules/.bin/tsc -p src -d --module commonjs
-
-# deploy/ serves as a working directory to stage the release.
-mkdir deploy
-
-# Copy all lib/ to deploy/
-cp -R ./dist/out-tsc/lib/* ./deploy/
+./node_modules/.bin/ngc -p ./src/lib/tsconfig.json -d
 
 # copy root readme and license to deployment folder
-# for multiple
-# for d in ./deploy/*; do cp README.md "$d"; done
-# for d in ./deploy/*; do cp LICENSE "$d"; done
-# single
 cp README.md ./deploy
 cp LICENSE ./deploy
 
 # copy package.json files that are in lib folders
-find src/lib -name 'package.json' -type f -exec cp {} ./deploy \;
+# find src/lib -name 'package.json' -type f -exec cp {} ./deploy \;
+cp ./src/lib/package.json ./deploy
