@@ -1,6 +1,6 @@
 {
   "name": "ng2-adsense",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Adsense for Angular 2",
   "main": "./ng2-adsense.js",
   "typings": "./ng2-adsense.d.ts",
