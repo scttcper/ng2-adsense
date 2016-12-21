@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
+import { routerTransition } from './router.animations';
 
 @Component({
   selector: 'app-root',
+  animations: [routerTransition()],
+  host: {'[@routerTransition]': ''},
   template: `
   <p class="text-xs-center">Current View: {{title}}</p>
   <ng2-adsense [adClient]="'ca-pub-7640562161899788'" [adSlot]="2930227358"></ng2-adsense>
@@ -15,6 +18,8 @@ export class PageComponent {
 
 @Component({
   selector: 'app-root',
+  animations: [routerTransition()],
+  host: {'[@routerTransition]': ''},
   template: `
   <p class="text-xs-center">Current View: {{title}}</p>
   <ng2-adsense [adClient]="'ca-pub-7640562161899788'" [adSlot]="2930227358"></ng2-adsense>

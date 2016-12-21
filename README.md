@@ -36,3 +36,13 @@ export class AppModule { }
   [adSlot]="7259870550">
 </ng2-adsense>
 ```
+
+### SystemJS
+If you are using SystemJS, you should also adjust your configuration to point to the UMD bundle.
+
+In your systemjs config file, `map` needs to tell the System loader where to look for `ng2-adsense`:
+```js
+map: {
+  'ng2-adsense': 'node_modules/ng2-adsense/ng2-adsense.umd.js',
+}
+```
