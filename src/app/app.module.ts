@@ -20,7 +20,10 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
-    AdsenseModule,
+    AdsenseModule.forRoot({
+      adClient: 'ca-pub-7640562161899788',
+      adSlot: 2930227358,
+    }),
   ],
   bootstrap: [AppComponent]
 })
