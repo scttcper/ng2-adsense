@@ -22,7 +22,11 @@ import { AdsenseModule } from 'ng2-adsense';
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    AdsenseModule, // <--- Add to imports
+    // shown passing optional global defaults
+    AdsenseModule.forRoot({
+      adClient: 'ca-pub-7640562161899788',
+      adSlot: 7259870550
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]
@@ -30,6 +34,12 @@ import { AdsenseModule } from 'ng2-adsense';
 export class AppModule { }
 ```
 ### 4. Use
+Use global defaults  
+```html
+<ng2-adsense></ng2-adsense>
+```
+
+Set adClient and adSlot that will override the global defaults if set  
 ```html
 <ng2-adsense
   [adClient]="'ca-pub-7640562161899788'"
