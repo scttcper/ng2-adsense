@@ -41,7 +41,7 @@
     "karma-jasmine": "^1.1.0",
     "karma-remap-istanbul": "^0.4.0",
     "protractor": "4.0.14",
-    "rollup": "^0.40.2",
+    "rollup": "^0.41.1",
     "ts-node": "^2.0.0",
     "tslint": "^4.3.0",
     "typescript": "~2.1.4"
