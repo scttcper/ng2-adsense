@@ -43,7 +43,7 @@
     "protractor": "4.0.14",
     "rollup": "^0.40.0",
     "ts-node": "^2.0.0",
-    "tslint": "^4.2.0",
+    "tslint": "^4.3.0",
     "typescript": "~2.1.4"
   }
 }
