@@ -10,7 +10,7 @@ Demo: https://scttcper.github.io/ng2-adsense/
 `npm install ng2-adsense --save`
 
 ### 2. Place Code
-Use the standard adsense code somewhere on your index.html
+Use the standard adsense code somewhere on your index.html.
 ```html
 <script async src=//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js></script>
 ```
