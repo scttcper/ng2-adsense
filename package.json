@@ -6,7 +6,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "lint": "tslint \"src/**/*.ts\"",
+    "lint": "tslint \"src/**/*.ts\" --project src/tsconfig.json --type-check && tslint \"e2e/**/*.ts\" --project e2e/tsconfig.json --type-check",
     "test": "ng test",
     "pree2e": "webdriver-manager update --standalone false --gecko false",
     "e2e": "protractor"
@@ -23,7 +23,7 @@
     "@angular/platform-browser-dynamic": "^2.4.3",
     "@angular/router": "^3.4.3",
     "core-js": "^2.4.1",
-    "rxjs": "5.0.3",
+    "rxjs": "^5.0.3",
     "ts-helpers": "^1.1.2",
     "zone.js": "^0.7.5"
   },
@@ -40,9 +40,8 @@
     "karma-cli": "^1.0.1",
     "karma-jasmine": "^1.1.0",
     "karma-remap-istanbul": "^0.4.0",
-    "protractor": "5.0.0",
-    "rollup": "^0.41.1",
-    "ts-node": "^2.0.0",
+    "protractor": "~5.0.0",
+    "ts-node": "2.0.0",
     "tslint": "^4.3.1",
     "typescript": "~2.1.5"
   }
