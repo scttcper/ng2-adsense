@@ -1,8 +1,11 @@
 # ng2-adsense
 [![NPM version][npm-image]][npm-url]
+[![build status][travis-img]][travis-url]
 
 [npm-image]: https://img.shields.io/npm/v/ng2-adsense.svg
 [npm-url]: https://npmjs.org/package/ng2-adsense
+[travis-img]: https://api.travis-ci.org/scttcper/ng2-adsense.svg?branch=master
+[travis-url]: https://travis-ci.org/scttcper/ng2-adsense
 
 Demo: https://scttcper.github.io/ng2-adsense/ 
 
