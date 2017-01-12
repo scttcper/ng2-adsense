@@ -44,6 +44,6 @@
     "rollup": "^0.40.2",
     "ts-node": "^2.0.0",
     "tslint": "^4.3.0",
-    "typescript": "~2.1.4"
+    "typescript": "~2.1.5"
   }
 }
