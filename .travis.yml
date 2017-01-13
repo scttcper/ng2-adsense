@@ -20,3 +20,5 @@ before_script:
 - yarn global add angular-cli
 - yarn install
 script: ng test --single-run --code-coverage --no-progress
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
