@@ -17,8 +17,6 @@ before_install:
   - sh -e /etc/init.d/xvfb start
 
 before_script:
-- npm install -g angular-cli
-- npm install -g karma
-- npm install
-- ng build
-script: ng test --single-run
+- yarn global add angular-cli
+- yarn install
+script: ng test --single-run --code-coverage --no-progress
