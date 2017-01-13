@@ -19,7 +19,7 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes),
+    RouterModule.forRoot(routes, { useHash: true }),
     AdsenseModule.forRoot({
       adClient: 'ca-pub-7640562161899788',
       adSlot: 2930227358,
