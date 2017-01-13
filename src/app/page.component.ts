@@ -9,7 +9,7 @@ import { routerTransition } from './router.animations';
   animations: [routerTransition()],
   host: {'[@routerTransition]': ''},
   template: `
-  <p class="text-xs-center">Current View: {{title}}</p>
+  <p class="text-center">Current View: {{title}}</p>
   <ng2-adsense></ng2-adsense>
   <ng2-adsense></ng2-adsense>
   `,
@@ -24,7 +24,7 @@ export class PageComponent {
   animations: [routerTransition()],
   host: {'[@routerTransition]': ''},
   template: `
-  <p class="text-xs-center">Current View: {{title}}</p>
+  <p class="text-center">Current View: {{title}}</p>
   <ng2-adsense [adClient]="'ca-pub-7640562161899788'" [adSlot]="2930227358"></ng2-adsense>
   `,
 })
