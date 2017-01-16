@@ -13,7 +13,9 @@
 Demo: https://scttcper.github.io/ng2-adsense/ 
 
 ### 1. Install
-`npm install ng2-adsense --save`
+```bash
+npm install ng2-adsense --save
+```
 
 ### 2. Place Code
 Use the standard adsense code somewhere on your index.html.
