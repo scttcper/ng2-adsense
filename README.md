@@ -1,4 +1,6 @@
 # ng2-adsense
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/scttcper/ng2-adsense.svg)](https://greenkeeper.io/)
 [![NPM version][npm-image]][npm-url]
 [![build status][travis-img]][travis-url]
 [![coverage status][coverage-img]][coverage-url]
