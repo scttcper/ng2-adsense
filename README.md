@@ -1,9 +1,8 @@
-# ng2-adsense
-
-[![Greenkeeper badge](https://badges.greenkeeper.io/scttcper/ng2-adsense.svg)](https://greenkeeper.io/)
+# ng2-adsense  
 [![NPM version][npm-image]][npm-url]
 [![build status][travis-img]][travis-url]
 [![coverage status][coverage-img]][coverage-url]
+[![greenkeeper][greenkeeper-image]][greenkeeper-url]
 
 [npm-image]: https://img.shields.io/npm/v/ng2-adsense.svg
 [npm-url]: https://npmjs.org/package/ng2-adsense
@@ -11,6 +10,8 @@
 [travis-url]: https://travis-ci.org/scttcper/ng2-adsense
 [coverage-img]: https://codecov.io/gh/scttcper/ng2-adsense/branch/master/graph/badge.svg
 [coverage-url]: https://codecov.io/gh/scttcper/ng2-adsense  
+[greenkeeper-image]: https://badges.greenkeeper.io/scttcper/ng2-adsense.svg
+[greenkeeper-url]: https://greenkeeper.io/
 
 Demo: https://scttcper.github.io/ng2-adsense/ 
 
