@@ -37,7 +37,7 @@ export class AdsenseConfig {
 export class AdsenseComponent implements OnInit, AfterViewInit {
   @Input() adClient: string;
   @Input() adSlot: string | number;
-  @Input() adFormat: string = 'auto';
+  @Input() adFormat = 'auto';
   @Input() adRegion = 'page-' + Math.floor(Math.random() * 10000) + 1;
   constructor(private config: AdsenseConfig) {
     // console.log(config);

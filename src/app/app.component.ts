@@ -1,7 +1,7 @@
 import { Component, VERSION } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
+  selector: 'ng2-root',
   templateUrl: './app.component.html',
 })
 export class AppComponent {
