@@ -59,7 +59,7 @@ export class AdsenseComponent implements OnInit, AfterViewInit {
     // will depeding on if the browser has the adsense code cached
     const res = this.push();
     if (res instanceof TypeError) {
-      setTimeout(() => this.push(), 20);
+      setTimeout(() => this.push(), 200);
     }
   }
   push() {
