@@ -1,6 +1,6 @@
 {
   "name": "ng2-adsense",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Adsense for Angular 2",
   "main": "./ng2-adsense.js",
   "typings": "./ng2-adsense.d.ts",
@@ -9,6 +9,7 @@
     "url": "https://github.com/scttcper/ng2-adsense.git"
   },
   "keywords": [
+    "Angular",
     "ng2",
     "angular2",
     "adsense",
