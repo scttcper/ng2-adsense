@@ -6,7 +6,6 @@ import {
   NgModule,
   ModuleWithProviders,
   OpaqueToken,
-  Injectable,
 } from '@angular/core';
 
 export class AdsenseConfig {
