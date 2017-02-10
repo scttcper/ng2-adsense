@@ -7,17 +7,18 @@
     "ng": "ng",
     "start": "ng serve",
     "test": "ng test",
+    "ghpages": "ng build --prod --aot --no-progress --baseHref='/ng2-adsense/'",
     "pree2e": "webdriver-manager update --standalone false --gecko false",
     "e2e": "protractor"
   },
   "private": true,
   "dependencies": {
-    "@angular/common": "^2.4.6",
-    "@angular/compiler": "^2.4.6",
-    "@angular/core": "^2.4.6",
-    "@angular/platform-browser": "^2.4.6",
-    "@angular/platform-browser-dynamic": "^2.4.6",
-    "@angular/router": "^3.4.6",
+    "@angular/common": "^2.4.7",
+    "@angular/compiler": "^2.4.7",
+    "@angular/core": "^2.4.7",
+    "@angular/platform-browser": "^2.4.7",
+    "@angular/platform-browser-dynamic": "^2.4.7",
+    "@angular/router": "^3.4.7",
     "bootstrap": "^4.0.0-alpha.6",
     "core-js": "^2.4.1",
     "rxjs": "^5.1.0",
@@ -27,10 +28,10 @@
   },
   "devDependencies": {
     "@angular/cli": "1.0.0-beta.31",
-    "@angular/compiler-cli": "^2.4.6",
+    "@angular/compiler-cli": "^2.4.7",
     "@types/jasmine": "2.5.41",
     "@types/node": "^7.0.5",
-    "codelyzer": "~2.0.0-beta.4",
+    "codelyzer": "~2.0.0",
     "jasmine-core": "2.5.2",
     "jasmine-spec-reporter": "3.2.0",
     "karma": "1.4.1",
@@ -38,10 +39,10 @@
     "karma-cli": "^1.0.1",
     "karma-jasmine": "^1.1.0",
     "karma-remap-istanbul": "^0.6.0",
-    "protractor": "~5.1.0",
+    "protractor": "~5.1.1",
     "rollup": "^0.41.4",
     "ts-node": "2.1.0",
     "tslint": "^4.4.2",
-    "typescript": "~2.1.5"
+    "typescript": "~2.1.6"
   }
 }
