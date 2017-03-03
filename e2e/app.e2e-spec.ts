@@ -1,10 +1,10 @@
-import { Ng2AdsensePage } from './app.po';
+import { Ng2adsensePage } from './app.po';
 
-describe('ng2-adsense App', function() {
-  let page: Ng2AdsensePage;
+describe('ng2-adsense App', () => {
+  let page: Ng2adsensePage;
 
   beforeEach(() => {
-    page = new Ng2AdsensePage();
+    page = new Ng2adsensePage();
   });
 
   it('should display message saying app works', () => {

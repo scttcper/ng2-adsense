@@ -1,6 +1,6 @@
 import { browser, element, by } from 'protractor';
 
-export class Ng2AdsensePage {
+export class Ng2adsensePage {
   navigateTo() {
     return browser.get('/');
   }
