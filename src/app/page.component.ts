@@ -1,4 +1,4 @@
-import { Component, HostBinding } from '@angular/core';
+import { Component } from '@angular/core';
 
 /**
  * Uses global values
@@ -20,8 +20,8 @@ export class PageComponent {
   selector: 'ng2-page-2',
   template: `
   <p class="text-center">Current View: {{title}}</p>
-  <ng2-adsense [adClient]="'ca-pub-7640562161899788'" [adSlot]="2930227358"></ng2-adsense>
-  <ng2-adsense></ng2-adsense>
+  <ng2-adsense [adClient]="'ca-pub-7640562161899788'" [adSlot]="2930227358" [width]="320" [height]="108"></ng2-adsense>
+  <ng2-adsense [display]="'inline-block'" [width]="320" [height]="108"></ng2-adsense>
   `,
 })
 export class OtherPageComponent extends PageComponent {
