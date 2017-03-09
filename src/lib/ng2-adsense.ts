@@ -7,9 +7,7 @@ import {
   ModuleWithProviders,
   OpaqueToken,
 } from '@angular/core';
-
-/* CommonModule required for ngStyle */
-import {CommonModule} from "@angular/common";
+import {CommonModule} from '@angular/common';
 
 export class AdsenseConfig {
 
@@ -24,9 +22,9 @@ export class AdsenseConfig {
     this.adClient = config.adClient || this.adClient;
     this.adSlot = config.adSlot || this.adSlot;
     this.adFormat = config.adFormat || this.adFormat;
-    this.display = config.display || 'block'
-    this.width = config.width
-    this.height = config.height
+    this.display = config.display || 'block';
+    this.width = config.width;
+    this.height = config.height;
 
   }
 }
@@ -46,17 +44,21 @@ export class AdsenseConfig {
   `,
 })
 export class AdsenseComponent implements OnInit, AfterViewInit {
+  /** adsense account ca-pub-XXXXXXXXXXXXXXXX */
   @Input() adClient: string;
+  /** ad slot/number */
   @Input() adSlot: string | number;
+  /** AD format */
   @Input() adFormat = 'auto';
+  /** can be manually set if you need all ads on a page to have same id page-xxx */
   @Input() adRegion = 'page-' + Math.floor(Math.random() * 10000) + 1;
-  @Input() display:string;
-  @Input() width:number;
-  @Input() height:number;
-  constructor(private config: AdsenseConfig) {
-    // console.log(config);
-    // console.log(this.adClient)
-  }
+  /** <ins> display style */
+  @Input() display: string;
+  /** <ins> height in px */
+  @Input() width: number;
+  /** <ins> width in px */
+  @Input() height: number;
+  constructor(private config: AdsenseConfig) {}
   ngOnInit() {
       this.adClient = this.adClient || this.config.adClient;
       this.adSlot = this.adSlot || this.config.adSlot;
@@ -66,9 +68,12 @@ export class AdsenseComponent implements OnInit, AfterViewInit {
       this.height = this.height || this.config.height;
   }
 
+  /**
+   * attempts to push the ad twice. Usually if one doesn't work the other
+   * will depeding on if the browser has the adsense code cached and
+   * if its the first page to be loaded
+   */
   ngAfterViewInit() {
-    // attempts to push the ad twice. Usually if one doesn't work the other
-    // will depeding on if the browser has the adsense code cached
     const res = this.push();
     if (res instanceof TypeError) {
       setTimeout(() => this.push(), 200);
