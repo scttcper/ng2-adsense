@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/scttcper/ng2-adsense",
   "peerDependencies": {
-    "@angular/core": "^2.4.0"
+    "@angular/core": "^2.4.0",
+    "@angular/common": "^2.4.0"
   }
 }
