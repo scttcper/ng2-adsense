@@ -8,29 +8,41 @@ import {
   OpaqueToken,
 } from '@angular/core';
 
+/* CommonModule required for ngStyle */
+import {CommonModule} from "@angular/common";
+
 export class AdsenseConfig {
+
   adClient?: string;
   adSlot?: string | number;
   adFormat?: string;
+  display?: string;
+  width?: number;
+  height?: number;
+
   constructor(config: AdsenseConfig = {}) {
     this.adClient = config.adClient || this.adClient;
     this.adSlot = config.adSlot || this.adSlot;
     this.adFormat = config.adFormat || this.adFormat;
+    this.display = config.display || 'block'
+    this.width = config.width
+    this.height = config.height
+
   }
 }
 
 @Component({
   selector: 'ng2-adsense',
   template: `
-  <div style="padding-bottom:8px;">
-    <ins class="adsbygoogle"
-      style="display:block;"
-      [attr.data-ad-client]="adClient"
-      [attr.data-ad-slot]="adSlot"
-      [attr.data-ad-format]="adFormat"
-      [attr.data-ad-region]="adRegion">
-    </ins>
-  </div>
+    <div style="padding-bottom:8px;">
+      <ins class="adsbygoogle"
+           [ngStyle]="{'display': display, 'width.px': width, 'height.px': height }"
+           [attr.data-ad-client]="adClient"
+           [attr.data-ad-slot]="adSlot"
+           [attr.data-ad-format]="adFormat"
+           [attr.data-ad-region]="adRegion">
+      </ins>
+    </div>
   `,
 })
 export class AdsenseComponent implements OnInit, AfterViewInit {
@@ -38,20 +50,20 @@ export class AdsenseComponent implements OnInit, AfterViewInit {
   @Input() adSlot: string | number;
   @Input() adFormat = 'auto';
   @Input() adRegion = 'page-' + Math.floor(Math.random() * 10000) + 1;
+  @Input() display:string;
+  @Input() width:number;
+  @Input() height:number;
   constructor(private config: AdsenseConfig) {
     // console.log(config);
     // console.log(this.adClient)
   }
   ngOnInit() {
-    if (!this.adClient && this.config.adClient) {
-      this.adClient = this.config.adClient;
-    }
-    if (!this.adSlot && this.config.adSlot) {
-      this.adSlot = this.config.adSlot;
-    }
-    if (!this.adFormat && this.config.adFormat) {
-      this.adFormat = this.config.adFormat;
-    }
+      this.adClient = this.adClient || this.config.adClient;
+      this.adSlot = this.adSlot || this.config.adSlot;
+      this.adFormat = this.adFormat || this.config.adFormat;
+      this.display = this.display || this.config.display;
+      this.width = this.width || this.config.width;
+      this.height = this.height || this.config.height;
   }
 
   ngAfterViewInit() {
@@ -80,6 +92,7 @@ export function provideAdsenseConfig(config: AdsenseConfig) {
 }
 
 @NgModule({
+  imports: [CommonModule],
   exports: [AdsenseComponent],
   declarations: [AdsenseComponent],
 })
