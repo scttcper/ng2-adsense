@@ -51,7 +51,7 @@ Use global defaults
 ```
 
 __adClient__ and __adSlot__ will override the global defaults  
-__display__, __width__, __height__ are all applied to the "<ins>" element and help specify size for ads  
+__display__, __width__, __height__ are all applied to the "ins" element and help specify size for ads  
 ```html
 <ng2-adsense
   [adClient]="'ca-pub-7640562161899788'"
