@@ -65,12 +65,12 @@ export class AdsenseComponent implements OnInit, AfterViewInit {
   @Input() height: number;
   constructor(private config: AdsenseConfig) {}
   ngOnInit() {
-      this.adClient = this.adClient || this.config.adClient;
-      this.adSlot = this.adSlot || this.config.adSlot;
-      this.adFormat = this.adFormat || this.config.adFormat;
-      this.display = this.display || this.config.display;
-      this.width = this.width || this.config.width;
-      this.height = this.height || this.config.height;
+    this.adClient = this.adClient || this.config.adClient;
+    this.adSlot = this.adSlot || this.config.adSlot;
+    this.adFormat = this.adFormat || this.config.adFormat;
+    this.display = this.display || this.config.display;
+    this.width = this.width || this.config.width;
+    this.height = this.height || this.config.height;
   }
 
   /**
