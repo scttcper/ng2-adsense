@@ -1,24 +1,25 @@
-<div class="container">
-  <div class="row">
-    <div class="col-lg-8 offset-lg-2 col-sm-12">
-      <div class="jumbotron text-center">
-        <h1 class="display-3">ng2-adsense</h1>
-        <p class="lead">Angular AdSense Component</p>
-        <p class="lead">
-          <a class="btn btn-secondary btn-lg" href="https://github.com/scttcper/ng2-adsense" role="button">GitHub</a>
-          <a class="btn btn-secondary btn-lg" href="https://www.npmjs.com/package/ng2-adsense" role="button">NPM</a>
-        </p>
-      </div>
-    </div>
+<div class="header text-center">
+  <h1>ng2-adsense</h1>
+  <p class="lead">Angular AdSense Component</p>
+  <div class="btn-group">
+    <a class="btn btn-secondary btn-lg" target="_blank" href="https://github.com/scttcper/ng2-adsense">
+      GitHub
+    </a>
+    <a class="btn btn-secondary btn-lg" target="_blank" href="https://www.npmjs.com/package/ng2-adsense">NPM</a>
   </div>
 </div>
+
 
 <div class="container">
   <div class="row">
     <div class="col-lg-8 offset-lg-2 col-sm-12">
       <h3>Preview:</h3>
       <h5 class="text-danger">Disable adblock for demo</h5>
-      <p>Demo of AdSense AD loading on route change. Sometimes a blank or identical AdSense AD is displayed.</p>
+      <p>
+        Demo of AdSense ad loading on route change.
+        Sometimes a blank or identical AdSense ad is displayed.
+        Page 1 has responsive ads and page 2 has ads with the width specified.
+      </p>
       <ul class="nav nav-pills">
         <li class="nav-item">
           <a class="nav-link" [routerLink]="'/1'" routerLinkActive="active">Page 1</a>
@@ -27,19 +28,18 @@
           <a class="nav-link" [routerLink]="'/2'" routerLinkActive="active">Page 2</a>
         </li>
       </ul>
-      <div style="height:200px;">
+      <hr>
+      <div class="pt-2 pb-5" style="min-height:450px">
         <router-outlet></router-outlet>
       </div>
-      <hr>
     </div>
   </div>
 </div>
 
-<div class="container">
-  <div class="row">
-    <div class="col text-center">
-      Demo running on Angular {{ version.full }} <br>
-      Not affiliated with Google AdSense
-    </div>
+<footer class="footer">
+  <div class="container text-center">
+    <span class="text-muted">
+      Demo running on Angular {{ version.full }} - Not affiliated with Google AdSense
+    </span>
   </div>
-</div>
+</footer>

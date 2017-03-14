@@ -1,5 +1,3 @@
-$font-size-root: 14px;
-
 @import "node_modules/bootstrap/scss/variables";
 @import "node_modules/bootstrap/scss/mixins";
 
@@ -29,7 +27,7 @@ $font-size-root: 14px;
 // @import "node_modules/bootstrap/scss/breadcrumb";
 // @import "node_modules/bootstrap/scss/pagination";
 // @import "node_modules/bootstrap/scss/badge";
-@import "node_modules/bootstrap/scss/jumbotron";
+// @import "node_modules/bootstrap/scss/jumbotron";
 // @import "node_modules/bootstrap/scss/alert";
 // @import "node_modules/bootstrap/scss/progress";
 // @import "node_modules/bootstrap/scss/media";
@@ -46,6 +44,49 @@ $font-size-root: 14px;
 // Utility classes
 @import "node_modules/bootstrap/scss/utilities";
 
+
+@mixin gradient-directional($start-color: #555, $end-color: #333, $deg: 45deg) {
+  background-repeat: repeat-x;
+  background-image: -webkit-linear-gradient($deg, $start-color, $end-color); // Safari 5.1-6, Chrome 10+
+  background-image: -o-linear-gradient($deg, $start-color, $end-color); // Opera 12
+  background-image: linear-gradient($deg, $start-color, $end-color); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+}
+
+.header {
+  @include gradient-directional(#360033, #0b8793);
+  color: #ffffff;
+  padding: 3rem 2rem;
+  margin-bottom: 1rem;
+  h1 {
+    weight: 100;
+  }
+  .btn {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-color: rgba(0, 0, 0, 0.4);
+  }
+  .btn:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-color: rgba(0, 0, 0, 0.7);
+  }
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
 body {
-  padding-top: 20px;
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px;
+  background-color: #f5f5f5;
 }
