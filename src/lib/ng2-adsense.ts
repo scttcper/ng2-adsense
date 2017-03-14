@@ -7,15 +7,22 @@ import {
   ModuleWithProviders,
   OpaqueToken,
 } from '@angular/core';
-import {CommonModule} from '@angular/common';
+import { CommonModule } from '@angular/common';
 
+/**
+ * Set optional global default values
+ */
 export class AdsenseConfig {
-
+  /** adsense account ca-pub-XXXXXXXXXXXXXXXX */
   adClient?: string;
+  /** ad slot/number */
   adSlot?: string | number;
   adFormat?: string;
+  /** ins element display style */
   display?: string;
+  /** ins element height in px */
   width?: number;
+  /** ins element width in px */
   height?: number;
 
   constructor(config: AdsenseConfig = {}) {
@@ -25,7 +32,6 @@ export class AdsenseConfig {
     this.display = config.display || 'block';
     this.width = config.width;
     this.height = config.height;
-
   }
 }
 
@@ -34,11 +40,11 @@ export class AdsenseConfig {
   template: `
     <div style="padding-bottom:8px;">
       <ins class="adsbygoogle"
-           [ngStyle]="{'display': display, 'width.px': width, 'height.px': height }"
-           [attr.data-ad-client]="adClient"
-           [attr.data-ad-slot]="adSlot"
-           [attr.data-ad-format]="adFormat"
-           [attr.data-ad-region]="adRegion">
+        [ngStyle]="{'display': display, 'width.px': width, 'height.px': height }"
+        [attr.data-ad-client]="adClient"
+        [attr.data-ad-slot]="adSlot"
+        [attr.data-ad-format]="adFormat"
+        [attr.data-ad-region]="adRegion">
       </ins>
     </div>
   `,
@@ -48,15 +54,14 @@ export class AdsenseComponent implements OnInit, AfterViewInit {
   @Input() adClient: string;
   /** ad slot/number */
   @Input() adSlot: string | number;
-  /** AD format */
   @Input() adFormat = 'auto';
   /** can be manually set if you need all ads on a page to have same id page-xxx */
   @Input() adRegion = 'page-' + Math.floor(Math.random() * 10000) + 1;
-  /** <ins> display style */
+  /** ins element display style */
   @Input() display: string;
-  /** <ins> height in px */
+  /** ins element height in px */
   @Input() width: number;
-  /** <ins> width in px */
+  /** ins element width in px */
   @Input() height: number;
   constructor(private config: AdsenseConfig) {}
   ngOnInit() {
