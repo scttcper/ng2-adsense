@@ -1,9 +1,8 @@
-/* tslint:disable:no-unused-variable */
+import {TestBed, async} from '@angular/core/testing';
 
-import { TestBed, async } from '@angular/core/testing';
-import { PageComponent } from './page.component';
+import {AdsenseModule} from '../lib/ng2-adsense';
 
-import { AdsenseModule } from '../lib/ng2-adsense';
+import {PageComponent} from './page.component';
 
 describe('PageComponent', () => {
   const options = {

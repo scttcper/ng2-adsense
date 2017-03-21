@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 /**
  * Uses global values
@@ -15,7 +15,9 @@ export class PageComponent {
   title = 'Page 1';
 }
 
-
+/**
+ * Uses local ad values
+ */
 @Component({
   selector: 'ng2-page-2',
   template: `

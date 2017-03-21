@@ -7,7 +7,7 @@ import {
   ModuleWithProviders,
   OpaqueToken,
 } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {CommonModule} from '@angular/common';
 
 /**
  * Set optional global default values

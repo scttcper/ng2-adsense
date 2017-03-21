@@ -1,10 +1,11 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { Routes, RouterModule } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {Routes, RouterModule} from '@angular/router';
 
-import { AppComponent } from './app.component';
-import { PageComponent, OtherPageComponent } from './page.component';
-import { AdsenseModule } from '../lib/ng2-adsense';
+import {AdsenseModule} from '../lib/ng2-adsense';
+
+import {AppComponent} from './app.component';
+import {PageComponent, OtherPageComponent} from './page.component';
 
 const routes: Routes = [
   { path: '1', component: PageComponent },
