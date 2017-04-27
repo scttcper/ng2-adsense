@@ -2,6 +2,8 @@
   "name": "ng2-adsense",
   "version": "0.0.0",
   "license": "MIT",
+  "repository": "https://github.com/scttcper/ng2-adsense.git",
+  "private": true,
   "scripts": {
     "ng": "ng",
     "start": "ng serve --aot",
@@ -11,7 +13,6 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "private": true,
   "dependencies": {
     "@angular/common": "^4.1.0",
     "@angular/compiler": "^4.1.0",
