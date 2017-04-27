@@ -26,12 +26,15 @@ export class AdsenseConfig {
   height?: number;
 
   constructor(config: AdsenseConfig = {}) {
-    this.adClient = config.adClient || this.adClient;
-    this.adSlot = config.adSlot || this.adSlot;
-    this.adFormat = config.adFormat || this.adFormat;
-    this.display = config.display || 'block';
-    this.width = config.width;
-    this.height = config.height;
+    function use<T>(source: T, defaultValue: T): T {
+      return config && source !== undefined ? source : defaultValue;
+    }
+    this.adClient = use(config.adClient, this.adClient);
+    this.adSlot = use(config.adSlot, this.adSlot);
+    this.adFormat = use(config.adFormat, this.adFormat);
+    this.display = use(config.display, 'block');
+    this.width = use(config.width, undefined);
+    this.height = use(config.height, undefined);
   }
 }
 
