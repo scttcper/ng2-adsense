@@ -7,7 +7,7 @@ import {
   ModuleWithProviders,
   OpaqueToken,
 } from '@angular/core';
-import {CommonModule} from '@angular/common';
+import { CommonModule } from '@angular/common';
 
 /**
  * Set optional global default values
@@ -41,15 +41,13 @@ export class AdsenseConfig {
 @Component({
   selector: 'ng2-adsense',
   template: `
-    <div style="padding-bottom:8px;">
-      <ins class="adsbygoogle"
-        [ngStyle]="{'display': display, 'width.px': width, 'height.px': height }"
-        [attr.data-ad-client]="adClient"
-        [attr.data-ad-slot]="adSlot"
-        [attr.data-ad-format]="adFormat"
-        [attr.data-ad-region]="adRegion">
-      </ins>
-    </div>
+  <ins class="adsbygoogle"
+    [ngStyle]="{'display': display, 'width.px': width, 'height.px': height }"
+    [attr.data-ad-client]="adClient"
+    [attr.data-ad-slot]="adSlot"
+    [attr.data-ad-format]="adFormat"
+    [attr.data-ad-region]="adRegion">
+  </ins>
   `,
 })
 export class AdsenseComponent implements OnInit, AfterViewInit {
