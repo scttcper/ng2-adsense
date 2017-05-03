@@ -3,26 +3,20 @@
     "declaration": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "module": "commonjs",
+    "lib": ["es6", "dom"],
+    "module": "es2015",
     "moduleResolution": "node",
     "noImplicitAny": true,
     "suppressImplicitAnyIndexErrors": true,
     "outDir": "../../deploy",
     "sourceMap": false,
     "target": "es5",
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "lib": [
-      "es2016",
-      "dom"
-    ],
     "types": []
   },
   "angularCompilerOptions": {
     "genDir": "../../waste"
   },
-  "exclude": [
-    "node_modules"
+  "files": [
+    "./ng2-adsense.ts"
   ]
 }
