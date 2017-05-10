@@ -7,7 +7,7 @@ if [[ $TRAVIS_BRANCH != 'master' ]]; then
 fi
 npm run ghpages
 echo "finished build"
-npm run global add gh-pages
+npm install -g gh-pages
 git config --global user.email "$PUSH_EMAIL"
 git config --global user.name "Travis CI"
 git config --global push.default simple
