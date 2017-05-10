@@ -5,18 +5,21 @@ import {Routes, RouterModule} from '@angular/router';
 import {AdsenseModule} from '../lib/ng2-adsense';
 
 import {AppComponent} from './app.component';
-import {PageComponent, OtherPageComponent} from './page.component';
+import {PageComponent, OtherPageComponent, ReloadPageComponent} from './page.component';
 
 const routes: Routes = [
   { path: '1', component: PageComponent },
   { path: '2', component: OtherPageComponent },
+  { path: 'ads/:id', component: ReloadPageComponent },
   { path: '**', redirectTo: '1', pathMatch: 'full' },
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    PageComponent, OtherPageComponent,
+    PageComponent,
+    OtherPageComponent,
+    ReloadPageComponent,
   ],
   imports: [
     BrowserModule,

@@ -19,13 +19,21 @@
         Demo of AdSense ad loading on route change.
         Sometimes a blank or identical AdSense ad is displayed.
         Page 1 has responsive ads and page 2 has ads with the width specified.
+        Page 3 and page 4 are the same component but has a setTimeout when the params are changed
+        to refresh the ads.
       </p>
       <ul class="nav nav-pills">
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="'/1'" routerLinkActive="active">Page 1</a>
+          <a class="nav-link" [routerLink]="'/1'" routerLinkActive="active">Page 1 (Responsive)</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="'/2'" routerLinkActive="active">Page 2</a>
+          <a class="nav-link" [routerLink]="'/2'" routerLinkActive="active">Page 2 (Set Width)</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="'/ads/1'" routerLinkActive="active">Page 3</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="'/ads/2'" routerLinkActive="active">Page 4</a>
         </li>
       </ul>
       <hr>
