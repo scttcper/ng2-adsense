@@ -5,9 +5,9 @@ if [[ $TRAVIS_BRANCH != 'master' ]]; then
 	echo "this is not master"
 	exit 0
 fi
-yarn ghpages
+npm run ghpages
 echo "finished build"
-yarn global add gh-pages
+npm run global add gh-pages
 git config --global user.email "$PUSH_EMAIL"
 git config --global user.name "Travis CI"
 git config --global push.default simple
