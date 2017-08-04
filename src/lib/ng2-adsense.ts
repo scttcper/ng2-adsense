@@ -45,7 +45,7 @@ export class AdsenseComponent implements OnInit, AfterViewInit {
   @Input() adClient: string;
   /** ad slot/number */
   @Input() adSlot: string | number;
-  @Input() adFormat;
+  @Input() adFormat: string;
   /** can be manually set if you need all ads on a page to have same id page-xxx */
   @Input() adRegion = 'page-' + Math.floor(Math.random() * 10000) + 1;
   /** ins element display style */
