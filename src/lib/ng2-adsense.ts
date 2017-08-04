@@ -5,10 +5,11 @@ import {
   OnInit,
   NgModule,
   ModuleWithProviders,
-  InjectionToken,
   Inject,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+import { ADSENSE_CONFIG } from './adsense.token';
 
 /**
  * Set optional global default values
@@ -53,18 +54,20 @@ export class AdsenseComponent implements OnInit, AfterViewInit {
   @Input() width: number;
   /** ins element width in px */
   @Input() height: number;
-  constructor(@Inject(ADSENSE_CONFIG) private config: AdsenseConfig) {}
+  constructor(
+    @Inject(ADSENSE_CONFIG) private config: AdsenseConfig,
+  ) { }
   ngOnInit() {
     const config = this.config;
     function use<T>(source: T, defaultValue: T): T {
       return config && source !== undefined ? source : defaultValue;
     }
-    this.adClient = use(this.adClient, this.config.adClient);
-    this.adSlot = use(this.adSlot, this.config.adSlot);
-    this.adFormat = use(this.adFormat, this.config.adFormat || 'auto');
-    this.display = use(this.display, this.config.display || 'block');
-    this.width = use(this.width, this.config.width);
-    this.height = use(this.height, this.config.height);
+    this.adClient = use(this.adClient, config.adClient);
+    this.adSlot = use(this.adSlot, config.adSlot);
+    this.adFormat = use(this.adFormat, config.adFormat || 'auto');
+    this.display = use(this.display, config.display || 'block');
+    this.width = use(this.width, config.width);
+    this.height = use(this.height, config.height);
   }
 
   /**
@@ -88,8 +91,6 @@ export class AdsenseComponent implements OnInit, AfterViewInit {
     }
   }
 }
-
-export const ADSENSE_CONFIG = new InjectionToken<AdsenseConfig>('AdsenseConfig');
 
 @NgModule({
   imports: [CommonModule],
