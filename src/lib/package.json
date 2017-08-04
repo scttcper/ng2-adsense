@@ -1,6 +1,6 @@
 {
   "name": "ng2-adsense",
-  "version": "2.2.1",
+  "version": "3.0.0",
   "description": "Adsense for Angular 2",
   "main": "./ng2-adsense.js",
   "typings": "./ng2-adsense.d.ts",
@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/scttcper/ng2-adsense",
   "peerDependencies": {
-    "@angular/core": ">=2.4.0 <5.0.0",
-    "@angular/common": ">=2.4.0 <5.0.0"
+    "@angular/core": ">=4.3.0 <=6.0.0",
+    "@angular/common": ">=4.3.0 <=6.0.0"
   }
 }

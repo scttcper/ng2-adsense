@@ -5,14 +5,15 @@ import {
   OnInit,
   NgModule,
   ModuleWithProviders,
-  OpaqueToken,
+  InjectionToken,
+  Inject,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 /**
  * Set optional global default values
  */
-export class AdsenseConfig {
+export interface AdsenseConfig {
   /** adsense account ca-pub-XXXXXXXXXXXXXXXX */
   adClient?: string;
   /** ad slot/number */
@@ -24,18 +25,6 @@ export class AdsenseConfig {
   width?: number;
   /** ins element width in px */
   height?: number;
-
-  constructor(config: AdsenseConfig = {}) {
-    function use<T>(source: T, defaultValue: T): T {
-      return config && source !== undefined ? source : defaultValue;
-    }
-    this.adClient = use(config.adClient, this.adClient);
-    this.adSlot = use(config.adSlot, this.adSlot);
-    this.adFormat = use(config.adFormat, this.adFormat);
-    this.display = use(config.display, 'block');
-    this.width = use(config.width, undefined);
-    this.height = use(config.height, undefined);
-  }
 }
 
 @Component({
@@ -55,7 +44,7 @@ export class AdsenseComponent implements OnInit, AfterViewInit {
   @Input() adClient: string;
   /** ad slot/number */
   @Input() adSlot: string | number;
-  @Input() adFormat = 'auto';
+  @Input() adFormat;
   /** can be manually set if you need all ads on a page to have same id page-xxx */
   @Input() adRegion = 'page-' + Math.floor(Math.random() * 10000) + 1;
   /** ins element display style */
@@ -64,14 +53,18 @@ export class AdsenseComponent implements OnInit, AfterViewInit {
   @Input() width: number;
   /** ins element width in px */
   @Input() height: number;
-  constructor(private config: AdsenseConfig) {}
+  constructor(@Inject(ADSENSE_CONFIG) private config: AdsenseConfig) {}
   ngOnInit() {
-    this.adClient = this.adClient || this.config.adClient;
-    this.adSlot = this.adSlot || this.config.adSlot;
-    this.adFormat = this.adFormat || this.config.adFormat;
-    this.display = this.display || this.config.display;
-    this.width = this.width || this.config.width;
-    this.height = this.height || this.config.height;
+    const config = this.config;
+    function use<T>(source: T, defaultValue: T): T {
+      return config && source !== undefined ? source : defaultValue;
+    }
+    this.adClient = use(this.adClient, this.config.adClient);
+    this.adSlot = use(this.adSlot, this.config.adSlot);
+    this.adFormat = use(this.adFormat, this.config.adFormat || 'auto');
+    this.display = use(this.display, this.config.display || 'block');
+    this.width = use(this.width, this.config.width);
+    this.height = use(this.height, this.config.height);
   }
 
   /**
@@ -96,11 +89,7 @@ export class AdsenseComponent implements OnInit, AfterViewInit {
   }
 }
 
-export const ADSENSE_CONFIG = new OpaqueToken('AdsenseConfig');
-
-export function provideAdsenseConfig(config: AdsenseConfig) {
-  return new AdsenseConfig(config);
-}
+export const ADSENSE_CONFIG = new InjectionToken<AdsenseConfig>('AdsenseConfig');
 
 @NgModule({
   imports: [CommonModule],
@@ -108,13 +97,10 @@ export function provideAdsenseConfig(config: AdsenseConfig) {
   declarations: [AdsenseComponent],
 })
 export class AdsenseModule {
-  static forRoot(config?: AdsenseConfig): ModuleWithProviders {
+  static forRoot(config: AdsenseConfig = {}): ModuleWithProviders {
     return {
       ngModule: AdsenseModule,
-      providers: [
-        { provide: ADSENSE_CONFIG, useValue: config },
-        { provide: AdsenseConfig, useFactory: provideAdsenseConfig, deps: [ADSENSE_CONFIG] },
-      ]
+      providers: [{ provide: ADSENSE_CONFIG, useValue: config }],
     };
   }
 }
