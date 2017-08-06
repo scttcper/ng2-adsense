@@ -26,6 +26,10 @@ export interface AdsenseConfig {
   width?: number;
   /** ins element width in px */
   height?: number;
+  /** used for in-feed ads */
+  layout?: string;
+  /** used for in-feed ads */
+  layoutKey?: string;
 }
 
 @Component({
@@ -36,7 +40,9 @@ export interface AdsenseConfig {
     [attr.data-ad-client]="adClient"
     [attr.data-ad-slot]="adSlot"
     [attr.data-ad-format]="adFormat"
-    [attr.data-ad-region]="adRegion">
+    [attr.data-ad-region]="adRegion"
+    [attr.data-layout]="layout"
+    [attr.data-layout-key]="layoutKey">
   </ins>
   `,
 })
@@ -54,9 +60,15 @@ export class AdsenseComponent implements OnInit, AfterViewInit {
   @Input() width: number;
   /** ins element width in px */
   @Input() height: number;
+  /** used for in-feed ads */
+  @Input() layout: string;
+  /** used for in-feed ads */
+  @Input() layoutKey: string;
+
   constructor(
     @Inject(ADSENSE_CONFIG) private config: AdsenseConfig,
   ) { }
+
   ngOnInit() {
     const config = this.config;
     function use<T>(source: T, defaultValue: T): T {
@@ -68,6 +80,8 @@ export class AdsenseComponent implements OnInit, AfterViewInit {
     this.display = use(this.display, config.display || 'block');
     this.width = use(this.width, config.width);
     this.height = use(this.height, config.height);
+    this.layout = use(this.layout, config.layout);
+    this.layoutKey = use(this.layoutKey, config.layoutKey);
   }
 
   /**
@@ -81,6 +95,7 @@ export class AdsenseComponent implements OnInit, AfterViewInit {
       setTimeout(() => this.push(), 200);
     }
   }
+
   push() {
     try {
       const adsbygoogle = window['adsbygoogle'];
