@@ -51,7 +51,7 @@ Use global defaults
 ```
 
 __adClient__ and __adSlot__ will override the global defaults if set  
-__display__, __width__, __height__ are all applied to the "ins" element and help specify size for ads
+__display__, __width__, __height__ are all applied to the "ins" element and help specify size for ads  
 __layout__, __layoutKey__ are available for in feed ads    
 ```html
 <ng2-adsense
