@@ -1,7 +1,7 @@
-<div class="header text-center">
-  <h1>ng2-adsense</h1>
-  <p class="lead">Angular AdSense Component</p>
-  <div class="btn-group">
+<div class="header text-center mb-3">
+  <div class="pb-5 pt-5">
+    <h1>ng2-adsense</h1>
+    <p class="lead mb-4">Angular AdSense Component</p>
     <a class="btn btn-secondary btn-lg" target="_blank" href="https://github.com/scttcper/ng2-adsense">
       GitHub
     </a>
@@ -10,44 +10,103 @@
 </div>
 
 
-<div class="container">
-  <div class="row">
-    <div class="col-lg-8 offset-lg-2 col-sm-12">
-      <h3>Preview:</h3>
-      <h5 class="text-danger">Disable adblock for demo</h5>
-      <p>
-        Demo of AdSense ad loading on route change.
-        Sometimes a blank or identical AdSense ad is displayed.
-        Page 1 has responsive ads and page 2 has ads with the width specified.
-        Page 3 and page 4 are the same component but has a setTimeout when the params are changed
-        to refresh the ads.
-      </p>
-      <ul class="nav nav-pills">
-        <li class="nav-item">
-          <a class="nav-link" [routerLink]="'/1'" routerLinkActive="active">Page 1 (Responsive)</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" [routerLink]="'/2'" routerLinkActive="active">Page 2 (Set Width)</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" [routerLink]="'/ads/1'" routerLinkActive="active">Page 3</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" [routerLink]="'/ads/2'" routerLinkActive="active">Page 4</a>
-        </li>
-      </ul>
-      <hr>
-      <div class="pt-2 pb-5" style="min-height:450px">
-        <router-outlet></router-outlet>
+<div class="container mb-3">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-9">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Demo</h4>
+          <h6 class="card-subtitle mb-2 text-danger">Disable Adblock</h6>
+          <p class="card-text">
+            Demo of AdSense Ad loading on route change.
+            Sometimes a blank or identical AdSense ad is displayed.
+          </p>
+          <ul>
+            <li>Page 1 - responsive ads</li>
+            <li>Page 2 - ads with specified width</li>
+            <li>Page 3 and 4 - same component but w/ setTimeout when the params are changed
+            to refresh the ads</li>
+          </ul>
+          <hr>
+          <ul class="nav nav-pills nav-fill">
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="'/1'" routerLinkActive="active">Page 1</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="'/2'" routerLinkActive="active">Page 2</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="'/ads/3'" routerLinkActive="active">Page 3</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="'/ads/4'" routerLinkActive="active">Page 4</a>
+            </li>
+          </ul>
+          <hr>
+          <div class="mt-3" style="min-height:220px">
+            <router-outlet></router-outlet>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mb-3">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-9">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">1. Install</h4>
+          <pre>npm install ng2-adsense</pre>
+          <h4 class="card-title">2. Place Code</h4>
+          <p class="card-text">
+            Use the standard AdSense code somewhere on your index.html
+          </p>
+          <pre>&lt;script async src=//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js>&lt;/script></pre>
+          <h4 class="card-title">2. Add to NgModule</h4>
+          <pre>import {{ '{' }} AdsenseModule {{ '}' }} from 'ng2-adsense';</pre>
+          <pre>
+imports: [
+  // shown passing optional global defaults
+  AdsenseModule.forRoot({{ '{' }}
+    adClient: 'ca-pub-7640562161899788',
+    adSlot: 7259870550
+  {{ '}' }}),
+],
+          </pre>
+          <h4 class="card-title">4. Use</h4>
+          <pre>&lt;ng2-adsense>&lt;/ng2-adsense></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mb-3">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-9">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Settings</h4>
+          <p class="card-text">
+            Can be passed as component inputs or to <em>AdsenseModule.forRoot</em> to apply to all.
+          </p>
+          <p class="card-text">
+            <strong>adClient</strong> and <strong>adSlot</strong> will override the global defaults if set<br>
+            <strong>display</strong>, <strong>width</strong>, <strong>height</strong> are all applied to the "ins" element and help specify size for ads<br>
+            <strong>layout</strong>, <strong>layoutKey</strong> are available for in feed ads
+          </p>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
 <footer class="footer">
-  <div class="container text-center">
-    <span class="text-muted">
-      Demo running on Angular {{ version.full }} - Not affiliated with Google AdSense
-    </span>
+  <div class="container text-center pt-3 pb-3">
+    <small class="text-muted">
+      Demo using Angular {{ version.full }} - Not affiliated with Google AdSense
+    </small>
   </div>
 </footer>

@@ -7,7 +7,9 @@ import {ActivatedRoute} from '@angular/router';
 @Component({
   selector: 'ng2-page-1',
   template: `
-  <p class="text-center">Current View: {{title}}</p>
+  <p class="text-center">
+    <strong>Current View: {{ title }}</strong>
+  </p>
   <ng2-adsense></ng2-adsense>
   <ng2-adsense></ng2-adsense>
   `,
@@ -22,7 +24,9 @@ export class PageComponent {
 @Component({
   selector: 'ng2-page-2',
   template: `
-  <p class="text-center">Current View: {{title}}</p>
+  <p class="text-center">
+    <strong>Current View: {{ title }}</strong>
+  </p>
   <ng2-adsense
     [adClient]="'ca-pub-7640562161899788'"
     [adSlot]="2930227358" [width]="320" [height]="108">
@@ -43,7 +47,9 @@ export class OtherPageComponent extends PageComponent {
 @Component({
   selector: 'ng2-page-3',
   template: `
-  <p class="text-center">Current View: {{title}}</p>
+  <p class="text-center">
+    <strong>Current View: {{ title }}</strong>
+  </p>
   <ng2-adsense *ngIf="!loading"></ng2-adsense>
   <ng2-adsense *ngIf="!loading"></ng2-adsense>
   `,
