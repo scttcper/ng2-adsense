@@ -1,9 +1,6 @@
 {
   "name": "ng2-adsense",
-  "version": "4.0.8",
-  "publishConfig": {
-    "tag": "next"
-  },
+  "version": "4.0.10",
   "description": "Adsense for Angular",
   "main": "./bundles/ng2-adsense.umd.js",
   "module": "./index.js",
