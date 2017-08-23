@@ -70,10 +70,10 @@ function generateBundle(input, { dest, globals, name }) {
  * @param {Object} globals
  */
 function createUmd(globals) {
-  const name = 'ng2-adsense';
+  const name = 'ngadsense';
   const entry = `${process.cwd()}/dist/packages-dist/index.js`;
   return generateBundle(entry, {
-    dest: `${process.cwd()}/dist/packages-dist/bundles/ng2-adsense.umd.js`,
+    dest: `${process.cwd()}/dist/packages-dist/bundles/ngadsense.umd.js`,
     globals,
     name
   });
@@ -132,7 +132,7 @@ function copyReadme() {
 }
 
 function measure(gzip = true) {
-  const path = `${process.cwd()}/dist/packages-dist/bundles/ng2-adsense.umd.js`;
+  const path = `${process.cwd()}/dist/packages-dist/bundles/ngadsense.umd.js`;
   const file = readFileSync(path);
   const bytes = gzipSize.sync(file);
   return prettySize(bytes, gzip);
@@ -178,7 +178,7 @@ function buildLibrary(globals) {
     // .switchMap(() => Observable.from(copyNpmIgnore()))
     .switchMap(() => Observable.from(copyReadme()))
     .do(() => {
-      console.log(`ng2-adsense.umd.js - ${measure()}`);
+      console.log(`ngadsense.umd.js - ${measure()}`);
       verifyVersions();
     });
 }

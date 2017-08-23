@@ -6,7 +6,7 @@
     "declaration": true
   },
   "files": [
-    "ng2-adsense.ts"
+    "ngadsense.ts"
   ],
   "angularCompilerOptions": {
     "skipTemplateCodegen": true,
