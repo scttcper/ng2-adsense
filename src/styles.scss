@@ -33,13 +33,17 @@
 // @import "node_modules/bootstrap/scss/carousel";
 @import "node_modules/bootstrap/scss/utilities";
 
-.header {
-  background-color: #FBDA61;
-  background-image: -webkit-linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
-  background-image: -moz-linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
-  background-image: -o-linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
-  background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
+body {
+  background-color: #fcfcfc;
+}
 
+.header {
+  color: #ffffff;
+  background-color: #21D4FD;
+  background-image: -webkit-linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+  background-image: -moz-linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+  background-image: -o-linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+  background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
 
 
   .btn {
