@@ -35,7 +35,7 @@ export interface AdsenseConfig {
 export const ADSENSE_CONFIG = new InjectionToken<AdsenseConfig>('AdsenseConfig');
 
 @Component({
-  selector: 'ng2-adsense',
+  selector: 'ng2-adsense,ng-adsense',
   template: `
   <ins class="adsbygoogle"
     [ngStyle]="{'display': display, 'width.px': width, 'height.px': height }"

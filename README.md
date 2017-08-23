@@ -47,20 +47,20 @@ export class AppModule { }
 ### 4. Use
 Use global defaults  
 ```html
-<ng2-adsense></ng2-adsense>
+<ng-adsense></ng-adsense>
 ```
 
 __adClient__ and __adSlot__ will override the global defaults if set  
 __display__, __width__, __height__ are all applied to the "ins" element and help specify size for ads  
 __layout__, __layoutKey__ are available for in feed ads    
 ```html
-<ng2-adsense
+<ng-adsense
   [adClient]="'ca-pub-7640562161899788'"
   [adSlot]="7259870550"
   [display]="'inline-block'"
   [width]="320"
   [height]="108">
-</ng2-adsense>
+</ng-adsense>
 ```
 
 ### SystemJS
