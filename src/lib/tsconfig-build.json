@@ -12,18 +12,18 @@
     "declaration": false,
     "removeComments": true,
     "strictNullChecks": true,
-    "lib": ["es2015", "dom", "es2015.promise", "es2015.collection", "es2015.iterable"],
+    "lib": ["es2015", "dom"],
     "skipLibCheck": true,
     "moduleResolution": "node"
   },
   "files": [
-    "ngadsense.ts"
+    "ng2-adsense.ts"
   ],
   "angularCompilerOptions": {
     "skipTemplateCodegen": true,
     "strictMetadataEmit": true,
     "enableSummariesForJit": true,
     "flatModuleOutFile": "index.js",
-    "flatModuleId": "ngadsense"
+    "flatModuleId": "ng2-adsense"
   }
 }

@@ -3,16 +3,17 @@
   "compilerOptions": {
     "target": "es5",
     "outDir": "../../dist/packages-dist",
-    "declaration": true
+    "declaration": true,
+    "removeComments": false
   },
   "files": [
-    "ngadsense.ts"
+    "ng2-adsense.ts"
   ],
   "angularCompilerOptions": {
     "skipTemplateCodegen": true,
     "strictMetadataEmit": true,
     "enableSummariesForJit": false,
     "flatModuleOutFile": "index.js",
-    "flatModuleId": "ngadsense"
+    "flatModuleId": "ng2-adsense"
   }
 }

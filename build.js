@@ -3,9 +3,10 @@ const { rollup } = require('rollup');
 const { spawn } = require('child_process');
 const { Observable } = require('rxjs');
 const { copy, readFileSync, writeFile } = require('fs-extra');
-const { prettySize } = require('pretty-size');
-const gzipSize = require('gzip-size');
+const filesize = require('rollup-plugin-filesize');
+const cleanup = require('rollup-plugin-cleanup');
 const resolve = require('rollup-plugin-node-resolve');
+
 const pkg = require(`${process.cwd()}/package.json`);
 
 // Rollup globals
@@ -51,16 +52,21 @@ function onwarn(warning) {
   console.error(warning);
 }
 
-function generateBundle(input, { dest, globals, name }) {
-  return rollup({ input, external: Object.keys(globals) }).then(bundle => {
+function generateBundle(input, { file, globals, name }) {
+  console.log(file)
+  return rollup({
+    input,
+    external: Object.keys(globals),
+    plugins: [
+      resolve(),
+      cleanup({ comments: 'none' }),
+      filesize(),
+    ],
+  }).then(bundle => {
     return bundle.write({
-      dest,
-      format: 'umd',
-      external: Object.keys(globals),
-      onwarn,
-      plugins: [resolve()],
-      globals,
+      file,
       name,
+      format: 'umd',
     });
   });
 }
@@ -70,12 +76,12 @@ function generateBundle(input, { dest, globals, name }) {
  * @param {Object} globals
  */
 function createUmd(globals) {
-  const name = 'ngadsense';
+  const name = 'ng2-adsense';
   const entry = `${process.cwd()}/dist/packages-dist/index.js`;
   return generateBundle(entry, {
-    dest: `${process.cwd()}/dist/packages-dist/bundles/ngadsense.umd.js`,
+    file: `${process.cwd()}/dist/packages-dist/bundles/ng2-adsense.umd.js`,
     globals,
-    name
+    name,
   });
 }
 
@@ -131,13 +137,6 @@ function copyReadme() {
   return copy(`${process.cwd()}/README.md`, `${process.cwd()}/dist/packages-dist/README.md`);
 }
 
-function measure(gzip = true) {
-  const path = `${process.cwd()}/dist/packages-dist/bundles/ngadsense.umd.js`;
-  const file = readFileSync(path);
-  const bytes = gzipSize.sync(file);
-  return prettySize(bytes, gzip);
-}
-
 /**
  * Returns each version of each AngularFire module.
  * This is used to help ensure each package has the same verison.
@@ -177,10 +176,7 @@ function buildLibrary(globals) {
     .forkJoin(modules$)
     // .switchMap(() => Observable.from(copyNpmIgnore()))
     .switchMap(() => Observable.from(copyReadme()))
-    .do(() => {
-      console.log(`ngadsense.umd.js - ${measure()}`);
-      verifyVersions();
-    });
+    .do(() => verifyVersions());
 }
 
 buildLibrary(GLOBALS).subscribe(
