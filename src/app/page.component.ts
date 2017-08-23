@@ -10,8 +10,8 @@ import {ActivatedRoute} from '@angular/router';
   <p class="text-center">
     <strong>Current View: {{ title }}</strong>
   </p>
-  <ng2-adsense></ng2-adsense>
-  <ng2-adsense></ng2-adsense>
+  <ng-adsense></ng-adsense>
+  <ng-adsense></ng-adsense>
   `,
 })
 export class PageComponent {

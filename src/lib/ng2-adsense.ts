@@ -6,10 +6,10 @@ import {
   NgModule,
   ModuleWithProviders,
   Inject,
+  InjectionToken,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { ADSENSE_CONFIG } from './adsense.token';
 
 /**
  * Set optional global default values
@@ -32,8 +32,10 @@ export interface AdsenseConfig {
   layoutKey?: string;
 }
 
+export const ADSENSE_CONFIG = new InjectionToken<AdsenseConfig>('AdsenseConfig');
+
 @Component({
-  selector: 'ng2-adsense',
+  selector: 'ng2-adsense,ng-adsense',
   template: `
   <ins class="adsbygoogle"
     [ngStyle]="{'display': display, 'width.px': width, 'height.px': height }"
@@ -71,7 +73,7 @@ export class AdsenseComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     const config = this.config;
-    function use<T>(source: T, defaultValue: T): T {
+    function use<T>(source: T, defaultValue: any): T {
       return config && source !== undefined ? source : defaultValue;
     }
     this.adClient = use(this.adClient, config.adClient);

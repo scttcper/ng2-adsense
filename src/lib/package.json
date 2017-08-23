@@ -1,19 +1,21 @@
 {
   "name": "ng2-adsense",
-  "version": "3.1.0",
-  "description": "Adsense for Angular 2",
-  "main": "./ng2-adsense.js",
-  "typings": "./ng2-adsense.d.ts",
+  "version": "4.0.8",
+  "publishConfig": {
+    "tag": "next"
+  },
+  "description": "Adsense for Angular",
+  "main": "./bundles/ng2-adsense.umd.js",
+  "module": "./index.js",
+  "es2015": "./es2015/index.js",
+  "typings": "./index.d.ts",
   "repository": "https://github.com/scttcper/ng2-adsense.git",
   "keywords": [
     "Angular",
     "ng2",
     "angular2",
     "typescript",
-    "angular AdSense",
-    "AdSense",
-    "google AdSense",
-    "adwords"
+    "AdSense"
   ],
   "license": "MIT",
   "bugs": {
