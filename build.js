@@ -10,32 +10,8 @@ const pkg = require(`${process.cwd()}/package.json`);
 
 // Rollup globals
 const GLOBALS = {
-  'rxjs': 'Rx',
-  'rxjs/Observable': 'Rx',
-  'rxjs/Subject': 'Rx',
-  'rxjs/Observer': 'Rx',
-  'rxjs/Subscription': 'Rx',
-  'rxjs/observable/merge': 'Rx.Observable',
-  'rxjs/operator/share': 'Rx.Observable.prototype',
-  'rxjs/operator/observeOn': 'Rx.Observable.prototype',
-  'rxjs/observable/of': 'Rx.Observable.prototype',
-  'rxjs/operator/merge': 'Rx.Observable.prototype',
-  'rxjs/operator/map': 'Rx.Observable.prototype',
-  'rxjs/observable/of': 'Rx.Observable',
-  'rxjs/operator/auditTime': 'Rx.Observable.prototype',
-  'rxjs/operator/switchMap': 'Rx.Observable.prototype',
-  'rxjs/operator/do': 'Rx.Observable.prototype',
-  'rxjs/operator/skip': 'Rx.Observable.prototype',
-  'rxjs/operator/take': 'Rx.Observable.prototype',
-  'rxjs/operator/toArray': 'Rx.Observable.prototype',
-  'rxjs/operator/toPromise': 'Rx.Observable.prototype',
-  'rxjs/operator': 'Rx.Observable.prototype',
-  'rxjs/scheduler/queue': 'Rx.Scheduler',
   '@angular/core': 'ng.core',
   '@angular/common': 'ng.common',
-  '@angular/compiler': 'ng.compiler',
-  '@angular/platform-browser': 'ng.platformBrowser',
-  '@angular/core/testing': 'ng.core.testing',
 };
 
 // Map of dependency versions across all packages
