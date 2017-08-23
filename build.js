@@ -6,6 +6,7 @@ const { copy, readFileSync, writeFile } = require('fs-extra');
 const filesize = require('rollup-plugin-filesize');
 const cleanup = require('rollup-plugin-cleanup');
 const resolve = require('rollup-plugin-node-resolve');
+const sourcemaps = require('rollup-plugin-sourcemaps');
 
 const pkg = require(`${process.cwd()}/package.json`);
 
@@ -42,16 +43,6 @@ function spawnObservable(command, args) {
   });
 }
 
-/** ignores errors during rollup */
-function onwarn(warning) {
-  const skip_codes = [
-    'THIS_IS_UNDEFINED',
-    'MISSING_GLOBAL_NAME',
-  ];
-  if ( skip_codes.indexOf(warning.code) != -1 ) return;
-  console.error(warning);
-}
-
 function generateBundle(input, { file, globals, name }) {
   console.log(file)
   return rollup({
@@ -60,12 +51,14 @@ function generateBundle(input, { file, globals, name }) {
     plugins: [
       resolve(),
       cleanup({ comments: 'none' }),
+      sourcemaps(),
       filesize(),
     ],
   }).then(bundle => {
     return bundle.write({
       file,
       name,
+      globals,
       format: 'umd',
     });
   });
