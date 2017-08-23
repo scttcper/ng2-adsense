@@ -1,3 +1,4 @@
+// from https://github.com/angular/angularfire2/blob/master/tools/build.js
 const { rollup } = require('rollup');
 const { spawn } = require('child_process');
 const { Observable } = require('rxjs');
