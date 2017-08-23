@@ -2,7 +2,7 @@ import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {Routes, RouterModule} from '@angular/router';
 
-import {AdsenseModule} from '../lib/ng2-adsense';
+import {AdsenseModule} from '../lib/ngadsense';
 
 import {AppComponent} from './app.component';
 import {PageComponent, OtherPageComponent, ReloadPageComponent} from './page.component';

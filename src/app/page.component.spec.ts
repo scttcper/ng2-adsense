@@ -1,6 +1,6 @@
 import {TestBed, async} from '@angular/core/testing';
 
-import {AdsenseModule} from '../lib/ng2-adsense';
+import {AdsenseModule} from '../lib/ngadsense';
 
 import {PageComponent, OtherPageComponent} from './page.component';
 
