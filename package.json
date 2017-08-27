@@ -9,6 +9,7 @@
     "start": "ng serve",
     "build": "rimraf dist && node build.js",
     "publish": "cd dist/packages-dist && npm publish",
+    "bundlesize": "bundlesize",
     "test": "ng test",
     "ghpages": "ng build --prod --aot --build-optimizer --no-progress --baseHref='/ng2-adsense/'",
     "lint": "ng lint",
@@ -31,6 +32,7 @@
     "@angular/compiler-cli": "^4.3.6",
     "@types/jasmine": "^2.5.54",
     "@types/node": "^8.0.25",
+    "bundlesize": "^0.14.1",
     "codelyzer": "^3.1.2",
     "fs-extra": "^4.0.1",
     "jasmine-core": "^2.8.0",
@@ -50,5 +52,11 @@
     "ts-node": "^3.3.0",
     "tslint": "^5.7.0",
     "typescript": "2.4.2"
-  }
+  },
+  "bundlesize": [
+    {
+      "path": "./dist/packages-dist/bundles/*.js",
+      "maxSize": "1.2 kB"
+    }
+  ]
 }
