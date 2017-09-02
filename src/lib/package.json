@@ -2,7 +2,7 @@
   "name": "ng2-adsense",
   "version": "4.0.11",
   "description": "Adsense for Angular",
-  "main": "./bundles/ng2-adsense.umd.js",
+  "main": "./ng2-adsense.umd.js",
   "module": "./ng2-adsense.es5.js",
   "es2015": "./ng2-adsense.es2015.js",
   "typings": "./index.d.ts",

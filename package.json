@@ -1,6 +1,6 @@
 {
   "name": "ng2-adsense",
-  "version": "4.0.11",
+  "version": "4.0.12",
   "license": "MIT",
   "repository": "https://github.com/scttcper/ng2-adsense.git",
   "private": true,
@@ -55,7 +55,7 @@
   },
   "bundlesize": [
     {
-      "path": "./dist/packages-dist/bundles/*.js",
+      "path": "./dist/packages-dist/ng2-adsense.umd.js",
       "maxSize": "2 kB"
     }
   ]

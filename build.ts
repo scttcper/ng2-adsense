@@ -71,7 +71,7 @@ function createUmd(globals) {
   const entry = `${process.cwd()}/dist/es5/index.js`;
   return generateBundle(
     entry,
-    `${process.cwd()}/dist/packages-dist/bundles/ng2-adsense.umd.js`,
+    `${process.cwd()}/dist/packages-dist/ng2-adsense.umd.js`,
     globals,
     name,
     'umd',
