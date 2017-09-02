@@ -67,7 +67,7 @@ function generateBundle(input, file, globals, name, format) {
 }
 
 function createUmd(globals) {
-  const name = 'ng2-toastr';
+  const name = 'ng2-adsense';
   const entry = `${process.cwd()}/dist/es5/index.js`;
   return generateBundle(
     entry,
@@ -79,7 +79,7 @@ function createUmd(globals) {
 }
 
 function createEs(globals, target) {
-  const name = 'ng2-toastr';
+  const name = 'ng2-adsense';
   const entry = `${process.cwd()}/dist/${target}/index.js`;
   return generateBundle(
     entry,
