@@ -2,7 +2,7 @@
   "extends": "./tsconfig-build.json",
   "compilerOptions": {
     "target": "es5",
-    "outDir": "../../dist/packages-dist",
+    "outDir": "../../dist/es5",
     "declaration": true,
     "removeComments": false
   },
@@ -10,6 +10,7 @@
     "ng2-adsense.ts"
   ],
   "angularCompilerOptions": {
+    "annotateForClosureCompiler": true,
     "skipTemplateCodegen": true,
     "strictMetadataEmit": true,
     "enableSummariesForJit": false,
