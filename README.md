@@ -36,7 +36,7 @@ import { AdsenseModule } from 'ng2-adsense';
     // shown passing optional global defaults
     AdsenseModule.forRoot({
       adClient: 'ca-pub-7640562161899788',
-      adSlot: 7259870550
+      adSlot: 7259870550,
     }),
   ],
   providers: [],
