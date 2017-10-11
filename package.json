@@ -28,12 +28,12 @@
     "zone.js": "^0.8.18"
   },
   "devDependencies": {
-    "@angular/cli": "1.4.4",
+    "@angular/cli": "1.4.5",
     "@angular/compiler-cli": "^4.4.4",
     "@types/jasmine": "^2.6.0",
-    "@types/node": "^8.0.32",
-    "bundlesize": "^0.15.1",
-    "codelyzer": "^3.2.0",
+    "@types/node": "^8.0.34",
+    "bundlesize": "^0.15.2",
+    "codelyzer": "^3.2.1",
     "copy": "^0.3.1",
     "fs-extra": "^4.0.2",
     "jasmine-core": "^2.8.0",
