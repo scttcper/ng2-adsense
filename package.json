@@ -16,12 +16,12 @@
     "e2e": "ng e2e"
   },
   "dependencies": {
-    "@angular/common": "^4.4.4",
-    "@angular/compiler": "^4.4.4",
-    "@angular/core": "^4.4.4",
-    "@angular/platform-browser": "^4.4.4",
-    "@angular/platform-browser-dynamic": "^4.4.4",
-    "@angular/router": "^4.4.4",
+    "@angular/common": "^4.4.5",
+    "@angular/compiler": "^4.4.5",
+    "@angular/core": "^4.4.5",
+    "@angular/platform-browser": "^4.4.5",
+    "@angular/platform-browser-dynamic": "^4.4.5",
+    "@angular/router": "^4.4.5",
     "bootstrap": "^4.0.0-beta",
     "core-js": "^2.5.1",
     "rxjs": "^5.4.3",
@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "@angular/cli": "1.4.7",
-    "@angular/compiler-cli": "^4.4.4",
+    "@angular/compiler-cli": "^4.4.5",
     "@types/jasmine": "^2.6.0",
     "@types/node": "^8.0.34",
     "bundlesize": "^0.15.2",
