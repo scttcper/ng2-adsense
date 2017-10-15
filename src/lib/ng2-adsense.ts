@@ -19,6 +19,7 @@ export interface AdsenseConfig {
   adClient?: string;
   /** ad slot/number */
   adSlot?: string | number;
+  /** data-ad-format default: auto */
   adFormat?: string;
   /** ins element display style */
   display?: string;
