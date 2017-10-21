@@ -16,22 +16,22 @@
     "e2e": "ng e2e"
   },
   "dependencies": {
-    "@angular/common": "^4.4.5",
-    "@angular/compiler": "^4.4.5",
-    "@angular/core": "^4.4.5",
-    "@angular/platform-browser": "^4.4.5",
-    "@angular/platform-browser-dynamic": "^4.4.5",
-    "@angular/router": "^4.4.5",
+    "@angular/common": "^4.4.6",
+    "@angular/compiler": "^4.4.6",
+    "@angular/core": "^4.4.6",
+    "@angular/platform-browser": "^4.4.6",
+    "@angular/platform-browser-dynamic": "^4.4.6",
+    "@angular/router": "^4.4.6",
     "bootstrap": "^4.0.0-beta",
     "core-js": "^2.5.1",
-    "rxjs": "^5.4.3",
+    "rxjs": "^5.5.0",
     "zone.js": "^0.8.18"
   },
   "devDependencies": {
-    "@angular/cli": "1.4.7",
-    "@angular/compiler-cli": "^4.4.5",
+    "@angular/cli": "1.4.9",
+    "@angular/compiler-cli": "^4.4.6",
     "@types/jasmine": "^2.6.0",
-    "@types/node": "^8.0.44",
+    "@types/node": "^8.0.46",
     "bundlesize": "^0.15.3",
     "codelyzer": "^3.2.1",
     "copy": "^0.3.1",
@@ -50,7 +50,7 @@
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-sourcemaps": "^0.4.2",
     "ts-node": "^3.3.0",
-    "tslint": "^5.7.0",
+    "tslint": "^5.8.0",
     "typescript": "^2.5.3"
   },
   "bundlesize": [

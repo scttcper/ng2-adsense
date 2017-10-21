@@ -1,15 +1,14 @@
+import { CommonModule } from '@angular/common';
 import {
-  Component,
-  Input,
   AfterViewInit,
-  OnInit,
-  NgModule,
-  ModuleWithProviders,
+  Component,
   Inject,
   InjectionToken,
+  Input,
+  ModuleWithProviders,
+  NgModule,
+  OnInit,
 } from '@angular/core';
-import { CommonModule } from '@angular/common';
-
 
 /**
  * Set optional global default values
@@ -68,9 +67,7 @@ export class AdsenseComponent implements OnInit, AfterViewInit {
   /** used for in-feed ads */
   @Input() layoutKey: string;
 
-  constructor(
-    @Inject(ADSENSE_CONFIG) private config: AdsenseConfig,
-  ) { }
+  constructor(@Inject(ADSENSE_CONFIG) private config: AdsenseConfig) {}
 
   ngOnInit() {
     const config = this.config;
