@@ -6,15 +6,13 @@
     "declaration": true,
     "removeComments": false
   },
-  "files": [
-    "ng2-adsense.ts"
-  ],
+  "files": ["ng2-adsense.ts"],
   "angularCompilerOptions": {
-    "annotateForClosureCompiler": true,
     "skipTemplateCodegen": true,
     "strictMetadataEmit": true,
     "enableSummariesForJit": false,
     "flatModuleOutFile": "index.js",
-    "flatModuleId": "ng2-adsense"
+    "flatModuleId": "ng2-adsense",
+    "annotationsAs": "decorators"
   }
 }

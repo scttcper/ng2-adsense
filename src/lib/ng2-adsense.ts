@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import {
   AfterViewInit,
+  ChangeDetectionStrategy,
   Component,
   Inject,
   InjectionToken,
@@ -51,6 +52,8 @@ export const ADSENSE_CONFIG = new InjectionToken<AdsenseConfig>(
     [attr.data-layout-key]="layoutKey">
   </ins>
   `,
+  preserveWhitespaces: false,
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AdsenseComponent implements OnInit, AfterViewInit {
   /** adsense account ca-pub-XXXXXXXXXXXXXXXX */

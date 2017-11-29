@@ -1,6 +1,6 @@
 {
   "name": "ng2-adsense",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "publishConfig": {
     "tag": "next"
   },
