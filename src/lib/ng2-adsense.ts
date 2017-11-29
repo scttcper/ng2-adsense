@@ -15,24 +15,28 @@ import {
  */
 export interface AdsenseConfig {
   /** adsense account ca-pub-XXXXXXXXXXXXXXXX */
-  adClient?: string;
+  adClient: string;
   /** ad slot/number */
-  adSlot?: string | number;
+  adSlot: string | number;
   /** data-ad-format default: auto */
-  adFormat?: string;
+  adFormat: string;
   /** ins element display style */
-  display?: string;
+  display: string;
   /** ins element height in px */
-  width?: number;
+  width: number;
   /** ins element width in px */
-  height?: number;
+  height: number;
   /** used for in-feed ads */
-  layout?: string;
+  layout: string;
   /** used for in-feed ads */
-  layoutKey?: string;
+  layoutKey: string;
+  /** enable page-level ads */
+  pageLevelAds: boolean;
 }
 
-export const ADSENSE_CONFIG = new InjectionToken<AdsenseConfig>('AdsenseConfig');
+export const ADSENSE_CONFIG = new InjectionToken<AdsenseConfig>(
+  'AdsenseConfig',
+);
 
 @Component({
   selector: 'ng2-adsense,ng-adsense',
@@ -66,6 +70,8 @@ export class AdsenseComponent implements OnInit, AfterViewInit {
   @Input() layout: string;
   /** used for in-feed ads */
   @Input() layoutKey: string;
+  /** enable page-level ads */
+  @Input() pageLevelAds = false;
 
   constructor(@Inject(ADSENSE_CONFIG) private config: AdsenseConfig) {}
 
@@ -97,9 +103,14 @@ export class AdsenseComponent implements OnInit, AfterViewInit {
   }
 
   push() {
+    const p: any = {};
+    if (this.pageLevelAds) {
+      p.google_ad_client = this.adClient;
+      p.enable_page_level_ads = true;
+    }
     try {
       const adsbygoogle = window['adsbygoogle'];
-      adsbygoogle.push({});
+      adsbygoogle.push(p);
       return true;
     } catch (e) {
       return e;
@@ -113,7 +124,7 @@ export class AdsenseComponent implements OnInit, AfterViewInit {
   declarations: [AdsenseComponent],
 })
 export class AdsenseModule {
-  static forRoot(config: AdsenseConfig = {}): ModuleWithProviders {
+  static forRoot(config: Partial<AdsenseConfig> = {}): ModuleWithProviders {
     return {
       ngModule: AdsenseModule,
       providers: [{ provide: ADSENSE_CONFIG, useValue: config }],
