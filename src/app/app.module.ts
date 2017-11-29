@@ -1,11 +1,17 @@
-import {NgModule} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
-import {Routes, RouterModule} from '@angular/router';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule, Routes } from '@angular/router';
 
-import {AdsenseModule} from '../lib/ng2-adsense';
+import { MdoButtonModule } from '@ctrl/ngx-github-buttons';
 
-import {AppComponent} from './app.component';
-import {PageComponent, OtherPageComponent, ReloadPageComponent} from './page.component';
+import { AdsenseModule } from '../lib/ng2-adsense';
+
+import { AppComponent } from './app.component';
+import {
+  OtherPageComponent,
+  PageComponent,
+  ReloadPageComponent,
+} from './page.component';
 
 const routes: Routes = [
   { path: '1', component: PageComponent },
@@ -28,7 +34,8 @@ const routes: Routes = [
       adClient: 'ca-pub-7640562161899788',
       adSlot: 2930227358,
     }),
+    MdoButtonModule,
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

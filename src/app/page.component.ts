@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 /**
  * Uses global values
@@ -61,10 +61,10 @@ export class ReloadPageComponent implements OnInit {
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {
-    this.route.params.subscribe((params) => {
-      this.title = `Page ${params['id']}`
+    this.route.params.subscribe(params => {
+      this.title = `Page ${params['id']}`;
       this.loading = true;
-      setTimeout(() => this.loading = false, 200);
+      setTimeout(() => (this.loading = false), 200);
     });
   }
 }
