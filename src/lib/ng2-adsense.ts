@@ -71,7 +71,7 @@ export class AdsenseComponent implements OnInit, AfterViewInit {
   /** used for in-feed ads */
   @Input() layoutKey: string;
   /** enable page-level ads */
-  @Input() pageLevelAds = false;
+  @Input() pageLevelAds: boolean;
 
   constructor(@Inject(ADSENSE_CONFIG) private config: AdsenseConfig) {}
 
@@ -88,6 +88,7 @@ export class AdsenseComponent implements OnInit, AfterViewInit {
     this.height = use(this.height, config.height);
     this.layout = use(this.layout, config.layout);
     this.layoutKey = use(this.layoutKey, config.layoutKey);
+    this.pageLevelAds = use(this.pageLevelAds, config.pageLevelAds);
   }
 
   /**
