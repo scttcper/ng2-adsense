@@ -1,9 +1,6 @@
 {
   "name": "ng2-adsense",
-  "version": "5.0.0-beta.0",
-  "publishConfig": {
-    "tag": "next"
-  },
+  "version": "5.0.0",
   "license": "MIT",
   "repository": "https://github.com/scttcper/ng2-adsense.git",
   "private": true,
