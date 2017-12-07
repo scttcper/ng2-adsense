@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "module": "es2015",
@@ -9,9 +10,8 @@
     "rootDir": ".",
     "sourceMap": true,
     "inlineSources": true,
-    "declaration": false,
-    "removeComments": true,
-    "strictNullChecks": true,
+    "declaration": true,
+    "removeComments": false,
     "lib": ["es2015", "dom"],
     "skipLibCheck": true,
     "moduleResolution": "node"
@@ -22,7 +22,6 @@
     "strictMetadataEmit": true,
     "enableSummariesForJit": true,
     "flatModuleOutFile": "index.js",
-    "flatModuleId": "ng2-adsense",
-    "annotationsAs": "decorators"
+    "flatModuleId": "ng2-adsense"
   }
 }

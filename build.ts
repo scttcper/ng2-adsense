@@ -80,7 +80,7 @@ function generateBundle(input, file, globals, name, format) {
 
 function createUmd(globals) {
   const name = 'ng2-adsense';
-  const entry = `${process.cwd()}/dist/es5/index.js`;
+  const entry = `${process.cwd()}/dist/es2015/index.js`;
   return generateBundle(
     entry,
     `${process.cwd()}/dist/packages-dist/ng2-adsense.umd.js`,
@@ -137,12 +137,14 @@ function copyFiles() {
   );
   return Observable.forkJoin(
     copyAll(
-      `${process.cwd()}/dist/es5/**/*.d.ts`,
+      `${process.cwd()}/dist/es2015/**/*.d.ts`,
       `${process.cwd()}/dist/packages-dist`,
     ),
-    copyAll(
-      `${process.cwd()}/dist/es5/**/*.metadata.json`,
-      `${process.cwd()}/dist/packages-dist`,
+    Observable.from(
+      copy(
+        `${process.cwd()}/dist/es2015/index.metadata.json`,
+        `${process.cwd()}/dist/packages-dist/index.metadata.json`,
+      ),
     ),
     Observable.from(
       copy(
