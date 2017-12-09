@@ -33,6 +33,8 @@ export interface AdsenseConfig {
   layoutKey: string;
   /** enable page-level ads */
   pageLevelAds: boolean;
+  /** on first load sometimes adsense is not ready */
+  timeOutRetry: number;
 }
 
 export const ADSENSE_CONFIG = new InjectionToken<AdsenseConfig>(
@@ -75,6 +77,8 @@ export class AdsenseComponent implements OnInit, AfterViewInit {
   @Input() layoutKey: string;
   /** enable page-level ads */
   @Input() pageLevelAds: boolean;
+  /** on first load sometimes adsense is not ready */
+  @Input() timeOutRetry: number;
 
   constructor(@Inject(ADSENSE_CONFIG) private config: AdsenseConfig) {}
 
@@ -92,6 +96,7 @@ export class AdsenseComponent implements OnInit, AfterViewInit {
     this.layout = use(this.layout, config.layout);
     this.layoutKey = use(this.layoutKey, config.layoutKey);
     this.pageLevelAds = use(this.pageLevelAds, config.pageLevelAds);
+    this.timeOutRetry = use(this.timeOutRetry, config.timeOutRetry || 200);
   }
 
   /**
@@ -102,7 +107,7 @@ export class AdsenseComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     const res = this.push();
     if (res instanceof TypeError) {
-      setTimeout(() => this.push(), 200);
+      setTimeout(() => this.push(), this.timeOutRetry);
     }
   }
 

@@ -1,6 +1,6 @@
 {
   "name": "ng2-adsense",
-  "version": "5.0.2",
+  "version": "5.1.0",
   "description": "Adsense for Angular",
   "main": "./ng2-adsense.umd.js",
   "module": "./ng2-adsense.es5.js",

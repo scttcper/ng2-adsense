@@ -1,6 +1,6 @@
 {
   "name": "ng2-adsense",
-  "version": "5.0.2",
+  "version": "5.1.0",
   "license": "MIT",
   "repository": "https://github.com/scttcper/ng2-adsense.git",
   "private": true,
@@ -25,7 +25,7 @@
     "@angular/router": "^5.1.0",
     "@ctrl/ngx-github-buttons": "1.0.0",
     "bootstrap": "^4.0.0-beta.2",
-    "core-js": "^2.5.1",
+    "core-js": "^2.5.2",
     "rxjs": "^5.5.5",
     "zone.js": "^0.8.18"
   },
@@ -35,7 +35,7 @@
     "@angular/language-service": "^5.1.0",
     "@types/jasmine": "~2.8.2",
     "@types/jasminewd2": "~2.0.3",
-    "@types/node": "^8.0.56",
+    "@types/node": "^8.0.57",
     "bundlesize": "^0.15.3",
     "codelyzer": "^4.0.1",
     "copy": "^0.3.1",
