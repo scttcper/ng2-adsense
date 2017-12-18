@@ -54,16 +54,16 @@
   },
   "bundlesize": [
     {
-      "path": "./dist/packages-dist/ng2-adsense.umd.js",
-      "maxSize": "1.5 kB"
+      "path": "./dist/bundles/ng2-adsense.umd.js",
+      "maxSize": "2 kB"
     },
     {
-      "path": "./dist/packages-dist/ng2-adsense.es2015.js",
-      "maxSize": "1.5 kB"
+      "path": "./dist/esm2015/ng2-adsense.js",
+      "maxSize": "2 kB"
     },
     {
-      "path": "./dist/packages-dist/ng2-adsense.es5.js",
-      "maxSize": "1.5 kB"
+      "path": "./dist/esm5/ng2-adsense.js",
+      "maxSize": "2 kB"
     }
   ]
 }
