@@ -1,7 +1,6 @@
 import { async, TestBed } from '@angular/core/testing';
 
 import { AdsenseModule } from '../lib/public_api';
-import { AppModule } from './app.module';
 
 import {
   OtherPageComponent,
