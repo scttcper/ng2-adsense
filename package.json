@@ -8,7 +8,7 @@
     "ng": "ng",
     "start": "ng serve --aot",
     "build": "ng-packagr -p src/lib/package.json && node prepublish.js",
-    "publish": "cd dist/packages-dist && npm publish",
+    "publish": "cd dist && npm publish",
     "bundlesize": "npx bundlesize",
     "test": "ng test",
     "ghpages": "ng build --prod --aot --build-optimizer --no-progress --baseHref='/ng2-adsense/'",
