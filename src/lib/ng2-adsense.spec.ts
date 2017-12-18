@@ -1,6 +1,7 @@
 import { async, TestBed } from '@angular/core/testing';
 
-import { AdsenseComponent, AdsenseModule } from './ng2-adsense';
+import { AdsenseComponent } from './adsense.component';
+import { AdsenseModule } from './adsense.module';
 
 describe('AdsenseComponent', () => {
   const options = {

@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { MdoButtonModule } from '@ctrl/ngx-github-buttons';
 
-import { AdsenseModule } from '../lib/ng2-adsense';
+import { AdsenseModule } from '../lib/public_api';
 
 import { AppComponent } from './app.component';
 import {

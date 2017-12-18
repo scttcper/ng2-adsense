@@ -1,8 +1,12 @@
 import { async, TestBed } from '@angular/core/testing';
 
-import { AdsenseModule } from '../lib/ng2-adsense';
+import { AdsenseModule } from '../lib/public_api';
+import { AppModule } from './app.module';
 
-import { OtherPageComponent, PageComponent } from './page.component';
+import {
+  OtherPageComponent,
+  PageComponent,
+} from './page.component';
 
 describe('PageComponent', () => {
   const options = {

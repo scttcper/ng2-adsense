@@ -1,11 +1,7 @@
 {
   "name": "ng2-adsense",
-  "version": "5.1.0",
+  "version": "5.1.1",
   "description": "Adsense for Angular",
-  "main": "./ng2-adsense.umd.js",
-  "module": "./ng2-adsense.es5.js",
-  "es2015": "./ng2-adsense.es2015.js",
-  "typings": "./index.d.ts",
   "repository": "https://github.com/scttcper/ng2-adsense.git",
   "keywords": ["Angular", "ng2", "angular2", "typescript", "AdSense"],
   "license": "MIT",
@@ -16,5 +12,11 @@
   "peerDependencies": {
     "@angular/core": ">=5.0.0 <=6.0.0",
     "@angular/common": ">=5.0.0 <=6.0.0"
+  },
+  "ngPackage": {
+    "lib": {
+      "entryFile": "public_api.ts"
+    },
+    "dest": "../../dist"
   }
 }

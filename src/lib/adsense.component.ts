@@ -1,45 +1,13 @@
-import { CommonModule } from '@angular/common';
 import {
   AfterViewInit,
   ChangeDetectionStrategy,
   Component,
   Inject,
-  InjectionToken,
   Input,
-  ModuleWithProviders,
-  NgModule,
   OnInit,
 } from '@angular/core';
 
-/**
- * Set optional global default values
- */
-export interface AdsenseConfig {
-  /** adsense account ca-pub-XXXXXXXXXXXXXXXX */
-  adClient: string;
-  /** ad slot/number */
-  adSlot: string | number;
-  /** data-ad-format default: auto */
-  adFormat: string;
-  /** ins element display style */
-  display: string;
-  /** ins element height in px */
-  width: number;
-  /** ins element width in px */
-  height: number;
-  /** used for in-feed ads */
-  layout: string;
-  /** used for in-feed ads */
-  layoutKey: string;
-  /** enable page-level ads */
-  pageLevelAds: boolean;
-  /** on first load sometimes adsense is not ready */
-  timeOutRetry: number;
-}
-
-export const ADSENSE_CONFIG = new InjectionToken<AdsenseConfig>(
-  'AdsenseConfig',
-);
+import { AdsenseConfig, ADSENSE_TOKEN } from './adsense-config';
 
 @Component({
   selector: 'ng2-adsense,ng-adsense',
@@ -80,7 +48,9 @@ export class AdsenseComponent implements OnInit, AfterViewInit {
   /** on first load sometimes adsense is not ready */
   @Input() timeOutRetry: number;
 
-  constructor(@Inject(ADSENSE_CONFIG) private config: AdsenseConfig) {}
+  constructor(
+    @Inject(ADSENSE_TOKEN) private config: AdsenseConfig,
+  ) {}
 
   ngOnInit() {
     const config = this.config;
@@ -127,16 +97,3 @@ export class AdsenseComponent implements OnInit, AfterViewInit {
   }
 }
 
-@NgModule({
-  imports: [CommonModule],
-  exports: [AdsenseComponent],
-  declarations: [AdsenseComponent],
-})
-export class AdsenseModule {
-  static forRoot(config: Partial<AdsenseConfig> = {}): ModuleWithProviders {
-    return {
-      ngModule: AdsenseModule,
-      providers: [{ provide: ADSENSE_CONFIG, useValue: config }],
-    };
-  }
-}
