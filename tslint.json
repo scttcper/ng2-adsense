@@ -70,7 +70,6 @@
         "variable-declaration": "nospace"
       }
     ],
-    "typeof-compare": true,
     "unified-signatures": true,
     "variable-name": false,
     "whitespace": [
@@ -92,7 +91,6 @@
     "no-output-rename": false,
     "use-life-cycle-interface": false,
     "use-pipe-transform-interface": false,
-    "invoke-injectable": true,
     "no-unused-variable": true,
     "ordered-imports": [
       true,
