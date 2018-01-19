@@ -1,7 +1,7 @@
 {
   "$schema": "../../node_modules/ng-packagr/package.schema.json",
   "name": "ng2-adsense",
-  "version": "5.1.2",
+  "version": "5.1.3",
   "description": "Adsense for Angular",
   "repository": "https://github.com/scttcper/ng2-adsense.git",
   "keywords": ["Angular", "ng2", "angular2", "typescript", "AdSense"],
@@ -11,8 +11,8 @@
   },
   "homepage": "https://github.com/scttcper/ng2-adsense",
   "peerDependencies": {
-    "@angular/core": ">=5.0.0 <=6.0.0",
-    "@angular/common": ">=5.0.0 <=6.0.0"
+    "@angular/core": ">=5.0.0",
+    "@angular/common": ">=5.0.0"
   },
   "ngPackage": {
     "lib": {

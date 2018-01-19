@@ -2,7 +2,7 @@
 $blue: #448aff;
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
-@import "~bootstrap/scss/print";
+@import "~bootstrap/scss/root";
 @import "~bootstrap/scss/reboot";
 @import "~bootstrap/scss/type";
 // @import "~bootstrap/scss/images";
@@ -33,6 +33,7 @@ $blue: #448aff;
 // @import "~bootstrap/scss/popover";
 // @import "~bootstrap/scss/carousel";
 @import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/print";
 
 body {
   background-color: #fcfcfc;
