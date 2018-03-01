@@ -24,6 +24,7 @@ export interface AdsenseConfig {
   pageLevelAds: boolean;
   /** on first load sometimes adsense is not ready */
   timeOutRetry: number;
+  adtest: string;
 }
 
 export const ADSENSE_TOKEN = new InjectionToken<AdsenseConfig>(

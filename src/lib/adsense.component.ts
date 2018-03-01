@@ -19,6 +19,7 @@ import { AdsenseConfig, ADSENSE_TOKEN } from './adsense-config';
     [attr.data-ad-format]="adFormat"
     [attr.data-ad-region]="adRegion"
     [attr.data-layout]="layout"
+    [attr.data-adtest]="adtest"
     [attr.data-layout-key]="layoutKey">
   </ins>
   `,
@@ -47,6 +48,8 @@ export class AdsenseComponent implements OnInit, AfterViewInit {
   @Input() pageLevelAds: boolean;
   /** on first load sometimes adsense is not ready */
   @Input() timeOutRetry: number;
+  /** sets up some sort of google test ad */
+  @Input() adtest: string;
 
   constructor(
     @Inject(ADSENSE_TOKEN) private config: AdsenseConfig,
@@ -54,7 +57,7 @@ export class AdsenseComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     const config = this.config;
-    function use<T>(source: T, defaultValue: any): T {
+    function use<T>(source: T, defaultValue: T): T {
       return config && source !== undefined ? source : defaultValue;
     }
     this.adClient = use(this.adClient, config.adClient);
@@ -67,6 +70,7 @@ export class AdsenseComponent implements OnInit, AfterViewInit {
     this.layoutKey = use(this.layoutKey, config.layoutKey);
     this.pageLevelAds = use(this.pageLevelAds, config.pageLevelAds);
     this.timeOutRetry = use(this.timeOutRetry, config.timeOutRetry || 200);
+    this.adtest = use(this.adtest, config.adtest);
   }
 
   /**
