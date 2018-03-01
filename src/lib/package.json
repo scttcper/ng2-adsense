@@ -1,7 +1,7 @@
 {
   "$schema": "../../node_modules/ng-packagr/package.schema.json",
   "name": "ng2-adsense",
-  "version": "5.1.4",
+  "version": "5.1.5",
   "description": "Adsense for Angular",
   "repository": "https://github.com/scttcper/ng2-adsense.git",
   "keywords": ["Angular", "ng2", "angular2", "typescript", "AdSense"],

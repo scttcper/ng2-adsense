@@ -40,18 +40,8 @@ body {
 }
 
 .header {
-  color: #fff;
+  color: #fbfbfb;
   background-color: $blue;
-
-  .btn {
-    color: #ffffff;
-    background-color: rgba(0, 0, 0, 0.4);
-    border-color: rgba(0, 0, 0, 0.5);
-  }
-  .btn:hover {
-    background-color: rgba(0, 0, 0, 0.6);
-    border-color: rgba(0, 0, 0, 0.7);
-  }
 }
 
 .footer {
