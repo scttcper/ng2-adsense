@@ -37,7 +37,7 @@
     "@nguniversal/module-map-ngfactory-loader": "5.0.0",
     "@ctrl/ngx-github-buttons": "1.0.9",
     "bootstrap": "4.0.0",
-    "core-js": "2.5.4",
+    "core-js": "2.5.5",
     "rxjs": "5.5.8",
     "zone.js": "0.8.25"
   },
