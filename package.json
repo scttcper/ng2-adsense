@@ -45,7 +45,7 @@
     "@angular/cli": "1.7.4",
     "@angular/compiler-cli": "5.2.9",
     "@angular/language-service": "5.2.9",
-    "@types/fs-extra": "5.0.1",
+    "@types/fs-extra": "5.0.2",
     "@types/jasmine": "2.8.6",
     "@types/jasminewd2": "2.0.3",
     "@types/node": "9.6.4",
