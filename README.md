@@ -36,7 +36,6 @@ import { AdsenseModule } from 'ng2-adsense';
       adSlot: 7259870550,
     }),
     ...
-    ]
 ```
 #### Show Ad
 Uses global defaults which can be overriden via inputs  
