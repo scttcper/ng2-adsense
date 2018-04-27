@@ -20,13 +20,13 @@
           <h4 class="card-title">Demo</h4>
           <h6 class="card-subtitle mb-2 text-danger">Disable Adblock</h6>
           <p class="card-text">
-            Demo of AdSense Ad loading on route change.
+            Shows AdSense Ad loading on route change.
             Sometimes a blank or identical AdSense ad is displayed.
           </p>
           <ul>
-            <li>Page 1 - responsive ads</li>
-            <li>Page 2 - ads with specified width</li>
-            <li>Page 3 and 4 - same component but w/ setTimeout when the params are changed
+            <li><strong>Page 1</strong> - responsive ads</li>
+            <li><strong>Page 2</strong> - ads with specified width</li>
+            <li><strong>Page 3 and 4</strong> - same component but w/ setTimeout when the params are changed
             to refresh the ads</li>
           </ul>
           <hr>
@@ -54,63 +54,12 @@
   </div>
 </div>
 
-<div class="container mb-3">
-  <div class="row justify-content-center">
-    <div class="col-12 col-lg-10 col-xl-9">
-      <div class="card">
-        <div class="card-body">
-          <h4 class="card-title">Use</h4>
-          <h6>1. Install</h6>
-          <pre>npm install ng2-adsense</pre>
-          <h6>2. Place Code</h6>
-          <p class="card-text">
-            Use the standard AdSense code somewhere on your index.html
-          </p>
-          <pre>&lt;script async src=//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js>&lt;/script></pre>
-          <h6>3. Add to NgModule</h6>
-          <pre>import {{ '{' }} AdsenseModule {{ '}' }} from 'ng2-adsense';</pre>
-          <pre>
-imports: [
-  // shown passing optional global defaults
-  AdsenseModule.forRoot({{ '{' }}
-    adClient: 'ca-pub-7640562161899788',
-    adSlot: 7259870550
-  {{ '}' }}),
-],
-          </pre>
-          <h6>4. Use</h6>
-          <pre>&lt;ng-adsense>&lt;/ng-adsense></pre>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="container mb-3">
-  <div class="row justify-content-center">
-    <div class="col-12 col-lg-10 col-xl-9">
-      <div class="card">
-        <div class="card-body">
-          <h4 class="card-title">Settings</h4>
-          <p class="card-text">
-            Can be passed as component inputs or to <em>AdsenseModule.forRoot</em> to apply to all.
-          </p>
-          <p class="card-text">
-            <strong>adClient</strong> and <strong>adSlot</strong> will override the global defaults if set<br>
-            <strong>display</strong>, <strong>width</strong>, <strong>height</strong> are all applied to the "ins" element and help specify size for ads<br>
-            <strong>layout</strong>, <strong>layoutKey</strong> are available for in feed ads<br>
-            <strong>pageLevelAds</strong> enables adsense page level ads
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
 <footer class="footer">
   <div class="container text-center pt-3 pb-3">
     <small class="text-muted">
-      Demo using Angular {{ version.full }} - Not affiliated with Google AdSense
+      Demo using Angular {{ version.full }}
+      <br>
+      Not affiliated with Google AdSense
     </small>
     <br>
     <small class="text-muted">
