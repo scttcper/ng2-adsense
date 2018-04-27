@@ -4,7 +4,9 @@ import {
   Component,
   Inject,
   Input,
+  OnDestroy,
   OnInit,
+  ViewChild,
 } from '@angular/core';
 
 import { AdsenseConfig, ADSENSE_TOKEN } from './adsense-config';
@@ -12,7 +14,7 @@ import { AdsenseConfig, ADSENSE_TOKEN } from './adsense-config';
 @Component({
   selector: 'ng2-adsense,ng-adsense',
   template: `
-  <ins class="adsbygoogle"
+  <ins #ins class="adsbygoogle"
     [ngStyle]="{'display': display, 'width.px': width, 'height.px': height }"
     [attr.data-ad-client]="adClient"
     [attr.data-ad-slot]="adSlot"
@@ -26,7 +28,7 @@ import { AdsenseConfig, ADSENSE_TOKEN } from './adsense-config';
   preserveWhitespaces: false,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AdsenseComponent implements OnInit, AfterViewInit {
+export class AdsenseComponent implements OnInit, AfterViewInit, OnDestroy {
   /** adsense account ca-pub-XXXXXXXXXXXXXXXX */
   @Input() adClient: string;
   /** ad slot/number */
@@ -50,6 +52,7 @@ export class AdsenseComponent implements OnInit, AfterViewInit {
   @Input() timeOutRetry: number;
   /** sets up some sort of google test ad */
   @Input() adtest: string;
+  @ViewChild('ins') ins: any;
 
   constructor(
     @Inject(ADSENSE_TOKEN) private config: AdsenseConfig,
@@ -71,6 +74,14 @@ export class AdsenseComponent implements OnInit, AfterViewInit {
     this.pageLevelAds = use(this.pageLevelAds, config.pageLevelAds);
     this.timeOutRetry = use(this.timeOutRetry, config.timeOutRetry || 200);
     this.adtest = use(this.adtest, config.adtest);
+  }
+  ngOnDestroy() {
+    const iframe = this.ins.nativeElement.querySelector('iframe');
+    if (iframe && iframe.contentWindow) {
+      iframe.contentWindow.document.innerHTML = '';
+      iframe.remove();
+      iframe.setAttribute('src', 'about:blank');
+    }
   }
 
   /**
