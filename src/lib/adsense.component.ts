@@ -78,9 +78,8 @@ export class AdsenseComponent implements OnInit, AfterViewInit, OnDestroy {
   ngOnDestroy() {
     const iframe = this.ins.nativeElement.querySelector('iframe');
     if (iframe && iframe.contentWindow) {
-      iframe.contentWindow.document.innerHTML = '';
+      iframe.src = 'about:blank';
       iframe.remove();
-      iframe.setAttribute('src', 'about:blank');
     }
   }
 
