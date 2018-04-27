@@ -11,43 +11,40 @@
 
 Demo: https://scttcper.github.io/ng2-adsense/ 
 
-### Install
+## Install
 ```bash
 npm install ng2-adsense
 ```
 
-### Use
+## Use
 
 #### Add adsense code
 Use the standard AdSense code somewhere in your `<head></head>` as you [normally would](https://support.google.com/adsense/answer/7477845)
 ```html
 <script async src=//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js></script>
 ```
-#### Add NgModule
+#### Import NgModule
 Add AdsenseModule to the imports of your NgModule
 ```typescript
 import { AdsenseModule } from 'ng2-adsense';
+
 @NgModule({
-  declarations: [AppComponent],
   imports: [
-    BrowserModule,
-    // shown passing optional global defaults
+    // shown passing global defaults (optional)
     AdsenseModule.forRoot({
       adClient: 'ca-pub-7640562161899788',
       adSlot: 7259870550,
     }),
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
+    ...
+    ]
 ```
-#### Use
-Use global defaults  
+#### Show Ad
+Uses global defaults which can be overriden via inputs  
 ```html
 <ng-adsense></ng-adsense>
 ```
 
+## Inputs
 __adClient__ and __adSlot__ will override the global defaults if set  
 __display__, __width__, __height__ are all applied to the "ins" element and help specify size for ads  
 __layout__, __layoutKey__ are available for in feed ads  
