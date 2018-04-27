@@ -1,8 +1,4 @@
-# ng2-adsense  
-[![NPM version][npm-image]][npm-url]
-[![build status][travis-img]][travis-url]
-[![coverage status][coverage-img]][coverage-url]
-[![greenkeeper][greenkeeper-image]][greenkeeper-url]
+# ng2-adsense [![NPM version][npm-image]][npm-url] [![build status][travis-img]][travis-url] [![coverage status][coverage-img]][coverage-url]
 
 [npm-image]: https://img.shields.io/npm/v/ng2-adsense.svg
 [npm-url]: https://npmjs.org/package/ng2-adsense
@@ -10,22 +6,24 @@
 [travis-url]: https://travis-ci.org/scttcper/ng2-adsense
 [coverage-img]: https://codecov.io/gh/scttcper/ng2-adsense/branch/master/graph/badge.svg
 [coverage-url]: https://codecov.io/gh/scttcper/ng2-adsense  
-[greenkeeper-image]: https://badges.greenkeeper.io/scttcper/ng2-adsense.svg
-[greenkeeper-url]: https://greenkeeper.io/
+
+> Easy AdSense for Angular Applications   
 
 Demo: https://scttcper.github.io/ng2-adsense/ 
 
-### 1. Install
+### Install
 ```bash
-npm install ng2-adsense --save
+npm install ng2-adsense
 ```
 
-### 2. Place Code
-Use the standard AdSense code somewhere on your index.html.
+### Use
+
+#### Add adsense code
+Use the standard AdSense code somewhere in your `<head></head>` as you [normally would](https://support.google.com/adsense/answer/7477845)
 ```html
 <script async src=//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js></script>
 ```
-### 3. Add to NgModule
+#### Add NgModule
 Add AdsenseModule to the imports of your NgModule
 ```typescript
 import { AdsenseModule } from 'ng2-adsense';
@@ -44,7 +42,7 @@ import { AdsenseModule } from 'ng2-adsense';
 })
 export class AppModule { }
 ```
-### 4. Use
+#### Use
 Use global defaults  
 ```html
 <ng-adsense></ng-adsense>
@@ -64,12 +62,3 @@ __pageLevelAds__ enables adsense page level ads
 </ng-adsense>
 ```
 
-### SystemJS
-If you are using SystemJS, you should also adjust your configuration to point to the UMD bundle.
-
-In your systemjs config file, `map` needs to tell the System loader where to look for `ng2-adsense`:
-```js
-map: {
-  'ng2-adsense': 'node_modules/ng2-adsense/ng2-adsense.umd.js',
-}
-```
