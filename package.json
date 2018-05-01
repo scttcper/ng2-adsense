@@ -36,7 +36,7 @@
     "@nguniversal/express-engine": "5.0.0",
     "@nguniversal/module-map-ngfactory-loader": "5.0.0",
     "@ctrl/ngx-github-buttons": "1.0.9",
-    "bootstrap": "4.1.0",
+    "bootstrap": "4.1.1",
     "core-js": "2.5.5",
     "rxjs": "5.5.10",
     "zone.js": "0.8.26"
