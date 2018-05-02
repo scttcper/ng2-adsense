@@ -50,7 +50,7 @@
     "@types/jasminewd2": "2.0.3",
     "@types/node": "9.6.8",
     "codelyzer": "4.3.0",
-    "fs-extra": "5.0.0",
+    "fs-extra": "6.0.0",
     "jasmine-core": "2.99.1",
     "jasmine-spec-reporter": "4.2.1",
     "karma": "2.0.2",
