@@ -34,7 +34,7 @@
     "@angular/platform-server": "5.2.10",
     "@angular/router": "5.2.10",
     "@nguniversal/express-engine": "5.0.0",
-    "@nguniversal/module-map-ngfactory-loader": "5.0.0",
+    "@nguniversal/module-map-ngfactory-loader": "6.0.0",
     "@ctrl/ngx-github-buttons": "1.0.9",
     "bootstrap": "4.1.1",
     "core-js": "2.5.5",
