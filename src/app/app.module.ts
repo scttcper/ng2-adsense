@@ -27,7 +27,7 @@ const routes: Routes = [
     ReloadPageComponent,
   ],
   imports: [
-    BrowserModule.withServerTransition({ appId: 'my-app' }),
+    BrowserModule,
     RouterModule.forRoot(routes, { useHash: true }),
     AdsenseModule.forRoot({
       adClient: 'ca-pub-7640562161899788',
