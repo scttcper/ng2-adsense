@@ -62,7 +62,7 @@
     "karma-jasmine-html-reporter": "0.2.2",
     "ng-packagr": "3.0.0-rc.3",
     "rimraf": "2.6.2",
-    "ts-node": "6.0.2",
+    "ts-node": "6.0.3",
     "tslint": "5.10.0",
     "typescript": "2.7.2"
   },
