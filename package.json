@@ -32,7 +32,7 @@
     "@angular/router": "6.0.0",
     "@ctrl/ngx-github-buttons": "2.0.2",
     "bootstrap": "4.1.1",
-    "core-js": "2.5.5",
+    "core-js": "2.5.6",
     "rxjs": "6.0.0",
     "zone.js": "0.8.26"
   },
