@@ -15,8 +15,8 @@
     "test:ci": "ng test --single-run --code-coverage --no-progress --browsers=ChromeCI",
     "lint": "ng lint ng2-adsense --type-check ---format stylish",
     "lint:fix": "ng lint ng2-adsense --type-check --fix ---format stylish",
-    "travis-deploy-once": "travis-deploy-once",
     "commit": "git-cz",
+    "travis-deploy-once": "travis-deploy-once",
     "semantic-release": "cd dist && semantic-release"
   },
   "dependencies": {
@@ -56,7 +56,7 @@
     "karma-coverage-istanbul-reporter": "1.4.2",
     "karma-jasmine": "1.1.2",
     "karma-jasmine-html-reporter": "1.1.0",
-    "ng-packagr": "3.0.0-rc.3",
+    "ng-packagr": "4.0.0-rc.0",
     "rimraf": "2.6.2",
     "ts-node": "6.0.3",
     "tslint": "5.10.0",
@@ -72,15 +72,7 @@
   },
   "bundlesize": [
     {
-      "path": "./dist/bundles/ng2-adsense.umd.js",
-      "maxSize": "2 kB"
-    },
-    {
-      "path": "./dist/esm2015/ng2-adsense.js",
-      "maxSize": "2 kB"
-    },
-    {
-      "path": "./dist/esm5/ng2-adsense.js",
+      "path": "./dist/bundles/ng2-adsense.umd.min.js",
       "maxSize": "2 kB"
     }
   ]
