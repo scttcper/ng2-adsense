@@ -42,7 +42,7 @@
     "@angular/compiler-cli": "6.0.7",
     "@angular/language-service": "6.0.7",
     "@types/fs-extra": "5.0.4",
-    "@types/jasmine": "2.8.7",
+    "@types/jasmine": "2.8.8",
     "@types/node": "9.6.18",
     "@types/rimraf": "2.0.2",
     "codelyzer": "4.3.0",
