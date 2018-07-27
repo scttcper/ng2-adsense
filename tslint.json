@@ -91,7 +91,6 @@
     "no-output-rename": false,
     "use-life-cycle-interface": false,
     "use-pipe-transform-interface": false,
-    "no-unused-variable": true,
     "ordered-imports": [
       true,
       {
