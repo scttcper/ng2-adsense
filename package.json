@@ -45,7 +45,7 @@
     "@types/jasmine": "2.8.8",
     "@types/node": "10.5.8",
     "@types/rimraf": "2.0.2",
-    "codelyzer": "4.4.2",
+    "codelyzer": "4.4.4",
     "commitizen": "2.10.1",
     "cz-conventional-changelog": "2.1.0",
     "fs-extra": "7.0.0",
