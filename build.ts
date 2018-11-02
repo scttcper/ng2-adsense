@@ -1,12 +1,8 @@
 import { copySync } from 'fs-extra';
 import { build } from 'ng-packagr';
 import { join } from 'path';
-import * as rimraf from 'rimraf';
 
 async function main() {
-  // cleanup dist
-  rimraf.sync(join(process.cwd(), '/dist'));
-
   // build package
   await build({
     project: join(process.cwd(), 'src/lib/package.json'),
