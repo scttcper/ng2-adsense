@@ -9,7 +9,7 @@ import {
   ViewChild,
 } from '@angular/core';
 
-import { AdsenseConfig, ADSENSE_TOKEN } from './adsense-config';
+import { ADSENSE_TOKEN, AdsenseConfig } from './adsense-config';
 
 @Component({
   selector: 'ng2-adsense,ng-adsense',
@@ -22,7 +22,8 @@ import { AdsenseConfig, ADSENSE_TOKEN } from './adsense-config';
     [attr.data-ad-region]="adRegion"
     [attr.data-layout]="layout"
     [attr.data-adtest]="adtest"
-    [attr.data-layout-key]="layoutKey">
+    [attr.data-layout-key]="layoutKey"
+    [attr.data-full-width-responsive]="fullWidthResponsive">
   </ins>
   `,
   preserveWhitespaces: false,
@@ -52,11 +53,13 @@ export class AdsenseComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() timeOutRetry: number;
   /** sets up some sort of google test ad */
   @Input() adtest: string;
+  /* used for flexible ads */
+  @Input() fullWidthResponsive: boolean;
   @ViewChild('ins') ins: any;
 
   constructor(
     @Inject(ADSENSE_TOKEN) private config: AdsenseConfig,
-  ) {}
+  ) { }
 
   ngOnInit() {
     const config = this.config;
@@ -74,6 +77,7 @@ export class AdsenseComponent implements OnInit, AfterViewInit, OnDestroy {
     this.pageLevelAds = use(this.pageLevelAds, config.pageLevelAds);
     this.timeOutRetry = use(this.timeOutRetry, config.timeOutRetry || 200);
     this.adtest = use(this.adtest, config.adtest);
+    this.fullWidthResponsive = use(this.fullWidthResponsive, config.fullWidthResponsive);
   }
   ngOnDestroy() {
     const iframe = this.ins.nativeElement.querySelector('iframe');

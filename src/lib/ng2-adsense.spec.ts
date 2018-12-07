@@ -27,5 +27,6 @@ describe('AdsenseComponent', () => {
     expect(ad.getAttribute('data-layout-key')).toEqual(null);
     expect(ad.getAttribute('height')).toEqual(null);
     expect(ad.getAttribute('width')).toEqual(null);
+    expect(ad.getAttribute('data-full-width-responsive')).toEqual(null);
   }));
 });

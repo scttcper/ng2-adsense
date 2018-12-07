@@ -25,6 +25,8 @@ export interface AdsenseConfig {
   /** on first load sometimes adsense is not ready */
   timeOutRetry: number;
   adtest: string;
+  /** used for flexible ads */
+  fullWidthResponsive: boolean;
 }
 
 export const ADSENSE_TOKEN = new InjectionToken<AdsenseConfig>(
