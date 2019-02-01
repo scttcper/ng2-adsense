@@ -54,7 +54,7 @@
     "karma-jasmine": "1.1.2",
     "karma-jasmine-html-reporter": "1.4.0",
     "karma-mocha-reporter": "2.2.5",
-    "ng-packagr": "4.4.0",
+    "ng-packagr": "4.4.5",
     "rimraf": "2.6.2",
     "semantic-release": "15.10.6",
     "travis-deploy-once": "5.0.9",
