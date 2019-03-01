@@ -41,7 +41,7 @@
     "@angular/cli": "7.0.7",
     "@angular/compiler-cli": "7.0.4",
     "@angular/language-service": "7.0.4",
-    "@types/fs-extra": "5.0.4",
+    "@types/fs-extra": "5.0.5",
     "@types/jasmine": "2.8.16",
     "@types/node": "10.12.19",
     "codelyzer": "4.5.0",
