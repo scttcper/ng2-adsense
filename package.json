@@ -43,7 +43,7 @@
     "@angular/language-service": "7.0.4",
     "@types/fs-extra": "5.0.5",
     "@types/jasmine": "2.8.16",
-    "@types/node": "10.12.19",
+    "@types/node": "10.12.27",
     "codelyzer": "4.5.0",
     "fs-extra": "7.0.1",
     "jasmine-core": "3.3.0",
