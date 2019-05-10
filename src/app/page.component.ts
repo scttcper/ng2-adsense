@@ -62,7 +62,7 @@ export class ReloadPageComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.subscribe(params => {
-      this.title = `Page ${params['id']}`;
+      this.title = `Page ${params.id}`;
       this.loading = true;
       setTimeout(() => (this.loading = false), 200);
     });

@@ -7,6 +7,7 @@ import {
   OnDestroy,
   OnInit,
   ViewChild,
+  ElementRef,
 } from '@angular/core';
 
 import { ADSENSE_TOKEN, AdsenseConfig } from './adsense-config';
@@ -15,7 +16,9 @@ import { ADSENSE_TOKEN, AdsenseConfig } from './adsense-config';
   selector: 'ng2-adsense,ng-adsense',
   template: `
   <ins #ins class="adsbygoogle"
-    [ngStyle]="{'display': display, 'width.px': width, 'height.px': height }"
+    [style.display]="display"
+    [style.width.px]="width"
+    [style.height.px]="height"
     [attr.data-ad-client]="adClient"
     [attr.data-ad-slot]="adSlot"
     [attr.data-ad-format]="adFormat"
@@ -26,7 +29,6 @@ import { ADSENSE_TOKEN, AdsenseConfig } from './adsense-config';
     [attr.data-full-width-responsive]="fullWidthResponsive">
   </ins>
   `,
-  preserveWhitespaces: false,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AdsenseComponent implements OnInit, AfterViewInit, OnDestroy {
@@ -55,7 +57,7 @@ export class AdsenseComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() adtest: string;
   /* used for flexible ads */
   @Input() fullWidthResponsive: boolean;
-  @ViewChild('ins') ins: any;
+  @ViewChild('ins', {read: ElementRef}) ins: any;
 
   constructor(
     @Inject(ADSENSE_TOKEN) private config: AdsenseConfig,
@@ -106,7 +108,7 @@ export class AdsenseComponent implements OnInit, AfterViewInit, OnDestroy {
       p.enable_page_level_ads = true;
     }
     try {
-      const adsbygoogle = window['adsbygoogle'];
+      const adsbygoogle = (window as any).adsbygoogle;
       adsbygoogle.push(p);
       return true;
     } catch (e) {
