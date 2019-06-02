@@ -15,7 +15,7 @@ import { ADSENSE_TOKEN, AdsenseConfig } from './adsense-config';
 @Component({
   selector: 'ng2-adsense,ng-adsense',
   template: `
-  <ins #ins class="adsbygoogle"
+  <ins #ins class="adsbygoogle {{ className }}"
     [style.display]="display"
     [style.width.px]="width"
     [style.height.px]="height"
@@ -57,6 +57,10 @@ export class AdsenseComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() adtest: string;
   /* used for flexible ads */
   @Input() fullWidthResponsive: boolean;
+  /**
+   * classes applied to the ins element
+   */
+  @Input() className: string;
   @ViewChild('ins', {read: ElementRef}) ins: any;
 
   constructor(

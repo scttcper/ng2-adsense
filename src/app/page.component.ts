@@ -29,7 +29,7 @@ export class PageComponent {
   </p>
   <ng2-adsense
     [adClient]="'ca-pub-7640562161899788'"
-    [adSlot]="2930227358" [width]="320" [height]="108">
+    [adSlot]="2930227358" [width]="320" [height]="108" [className]="'swag'">
   </ng2-adsense>
   <ng2-adsense
     [display]="'inline-block'"
