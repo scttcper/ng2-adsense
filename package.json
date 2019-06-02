@@ -8,7 +8,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "del dist && ts-node -O '{ \"module\": \"commonjs\" }' build.ts",
-    "ghpages": "ng build --prod --no-progress --baseHref='/ng2-adsense/'",
+    "ghpages": "ng build --prod --no-progress",
     "publish": "cd dist && npm publish",
     "bundlesize": "npx bundlesize",
     "test": "ng test ---watch=false --browsers=ChromeCI",
