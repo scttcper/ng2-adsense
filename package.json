@@ -16,7 +16,6 @@
     "test:ci": "ng test --watch=false --code-coverage --no-progress --browsers=ChromeCI",
     "lint": "ng lint",
     "lint:fix": "ng lint --fix",
-    "travis-deploy-once": "travis-deploy-once",
     "semantic-release": "cd dist && semantic-release"
   },
   "dependencies": {
@@ -55,11 +54,10 @@
     "karma-mocha-reporter": "2.2.5",
     "ng-packagr": "5.2.0",
     "semantic-release": "15.13.12",
-    "travis-deploy-once": "5.0.11",
     "ts-node": "8.2.0",
     "tsickle": "0.35.0",
     "tslint": "5.17.0",
-    "typescript": "3.5.1"
+    "typescript": "3.4.5"
   },
   "engines": {
     "npm": ">= 6",
