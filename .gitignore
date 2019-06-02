@@ -43,3 +43,4 @@ yarn-error.log
 Thumbs.db
 /deploy
 /waste
+yarn.lock
