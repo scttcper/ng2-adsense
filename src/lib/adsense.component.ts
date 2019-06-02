@@ -61,7 +61,7 @@ export class AdsenseComponent implements OnInit, AfterViewInit, OnDestroy {
    * classes applied to the ins element
    */
   @Input() className: string;
-  @ViewChild('ins', {read: ElementRef}) ins: any;
+  @ViewChild('ins', { read: ElementRef, static: true }) ins: any;
 
   constructor(
     @Inject(ADSENSE_TOKEN) private config: AdsenseConfig,

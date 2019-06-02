@@ -9,13 +9,22 @@
 
 > Easy AdSense for Angular Applications
 
-__Demo__: https://ng2-adsense.netlify.com/
+**Demo**: https://ng2-adsense.netlify.com/
 
 ## Install
 
 ```bash
 npm install ng2-adsense
 ```
+
+## Dependencies
+
+Latest version available for each version of Angular
+
+| @ctrl/ngx-chartjs | Angular     |
+| ----------------- | ----------- |
+| 5.4.3             | 5.x 6.x 7.x |
+| >6.0.0            | 8.x         |
 
 ## Use
 
@@ -68,6 +77,7 @@ Uses global defaults which can be overriden via inputs
 | pageLevelAds | boolean       | enable page-level ads                                                 |
 | timeOutRetry | boolean       | on first load sometimes adsense is not ready. retry's push after x ms |
 | adtest       | string        | sets up some sort of google test ad                                   |
+| className    | string        | add custom class names to the "ins" element                           |
 
 ```html
 <ng-adsense
@@ -75,6 +85,6 @@ Uses global defaults which can be overriden via inputs
   [adSlot]="7259870550"
   [display]="'inline-block'"
   [width]="320"
-  [height]="108">
-</ng-adsense>
+  [height]="108"
+></ng-adsense>
 ```
