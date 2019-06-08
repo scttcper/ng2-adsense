@@ -9,7 +9,7 @@
 
 > Easy AdSense for Angular Applications
 
-**Demo**: https://ng2-adsense.netlify.com/
+**Demo**: https://ng2-adsense.xmplaylist.com/
 
 ## Install
 

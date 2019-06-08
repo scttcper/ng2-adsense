@@ -2,8 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 
-import { MdoButtonModule } from '@ctrl/ngx-github-buttons';
-
 import { AdsenseModule } from '../lib/public_api';
 import { AppComponent } from './app.component';
 import {
@@ -33,7 +31,6 @@ const routes: Routes = [
       adClient: 'ca-pub-7640562161899788',
       adSlot: 2930227358,
     }),
-    MdoButtonModule,
   ],
   bootstrap: [AppComponent],
 })
