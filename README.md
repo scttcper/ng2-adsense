@@ -21,7 +21,7 @@ npm install ng2-adsense
 
 Latest version available for each version of Angular
 
-| @ctrl/ngx-chartjs | Angular     |
+| ng2-adsense       | Angular     |
 | ----------------- | ----------- |
 | 5.4.3             | 5.x 6.x 7.x |
 | >6.0.0            | 8.x         |
