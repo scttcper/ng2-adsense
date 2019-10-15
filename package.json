@@ -10,7 +10,6 @@
     "build": "del dist && ts-node -O '{ \"module\": \"commonjs\" }' build.ts",
     "ghpages": "ng build --prod --no-progress",
     "publish": "cd dist && npm publish",
-    "bundlesize": "npx bundlesize",
     "test": "ng test ---watch=false --browsers=ChromeCI",
     "test:watch": "ng test --browsers=ChromeCI",
     "test:ci": "ng test --watch=false --code-coverage --no-progress --browsers=ChromeCI",
@@ -64,11 +63,5 @@
   },
   "release": {
     "branch": "master"
-  },
-  "bundlesize": [
-    {
-      "path": "./dist/bundles/ng2-adsense.umd.min.js",
-      "maxSize": "2 kB"
-    }
-  ]
+  }
 }
