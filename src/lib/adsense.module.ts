@@ -10,7 +10,7 @@ import { AdsenseComponent } from './adsense.component';
   declarations: [AdsenseComponent],
 })
 export class AdsenseModule {
-  static forRoot(config: Partial<AdsenseConfig> = {}): ModuleWithProviders {
+  static forRoot(config: Partial<AdsenseConfig> = {}): ModuleWithProviders<AdsenseModule> {
     return {
       ngModule: AdsenseModule,
       providers: [{ provide: ADSENSE_TOKEN, useValue: config }],

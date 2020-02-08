@@ -24,7 +24,8 @@ Latest version available for each version of Angular
 | ng2-adsense       | Angular     |
 | ----------------- | ----------- |
 | 5.4.3             | 5.x 6.x 7.x |
-| >6.0.0            | 8.x         |
+| 6.0.3             | 8.x         |
+| current           | >= 9.x      |
 
 ## Use
 
