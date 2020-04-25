@@ -76,7 +76,6 @@ Uses global defaults which can be overriden via inputs
 | layout       | string        | used for in-feed ads                                                  |
 | layoutKey    | string        | used for in-feed ads                                                  |
 | pageLevelAds | boolean       | enable page-level ads                                                 |
-| timeOutRetry | boolean       | on first load sometimes adsense is not ready. retry's push after x ms |
 | adtest       | string        | sets up some sort of google test ad                                   |
 | className    | string        | add custom class names to the "ins" element                           |
 

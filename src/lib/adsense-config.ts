@@ -22,8 +22,6 @@ export interface AdsenseConfig {
   layoutKey: string;
   /** enable page-level ads */
   pageLevelAds: boolean;
-  /** on first load sometimes adsense is not ready */
-  timeOutRetry: number;
   adtest: string;
   /** used for flexible ads */
   fullWidthResponsive: boolean;

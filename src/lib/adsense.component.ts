@@ -8,26 +8,31 @@ import {
   OnInit,
   ViewChild,
   ElementRef,
+  PLATFORM_ID,
 } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 import { ADSENSE_TOKEN, AdsenseConfig } from './adsense-config';
 
 @Component({
   selector: 'ng2-adsense,ng-adsense',
   template: `
-  <ins #ins class="adsbygoogle {{ className }}"
-    [style.display]="display"
-    [style.width.px]="width"
-    [style.height.px]="height"
-    [attr.data-ad-client]="adClient"
-    [attr.data-ad-slot]="adSlot"
-    [attr.data-ad-format]="adFormat"
-    [attr.data-ad-region]="adRegion"
-    [attr.data-layout]="layout"
-    [attr.data-adtest]="adtest"
-    [attr.data-layout-key]="layoutKey"
-    [attr.data-full-width-responsive]="fullWidthResponsive">
-  </ins>
+    <ins
+      #ins
+      class="adsbygoogle {{ className }}"
+      [style.display]="display"
+      [style.width.px]="width"
+      [style.height.px]="height"
+      [attr.data-ad-client]="adClient"
+      [attr.data-ad-slot]="adSlot"
+      [attr.data-ad-format]="adFormat"
+      [attr.data-ad-region]="adRegion"
+      [attr.data-layout]="layout"
+      [attr.data-adtest]="adtest"
+      [attr.data-layout-key]="layoutKey"
+      [attr.data-full-width-responsive]="fullWidthResponsive"
+    >
+    </ins>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
@@ -51,8 +56,6 @@ export class AdsenseComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() layoutKey: string;
   /** enable page-level ads */
   @Input() pageLevelAds: boolean;
-  /** on first load sometimes adsense is not ready */
-  @Input() timeOutRetry: number;
   /** sets up some sort of google test ad */
   @Input() adtest: string;
   /* used for flexible ads */
@@ -65,9 +68,10 @@ export class AdsenseComponent implements OnInit, AfterViewInit, OnDestroy {
 
   constructor(
     @Inject(ADSENSE_TOKEN) private config: AdsenseConfig,
-  ) { }
+    @Inject(PLATFORM_ID) private platform: any,
+  ) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     const config = this.config;
     function use<T>(source: T, defaultValue: T): T {
       return config && source !== undefined ? source : defaultValue;
@@ -81,11 +85,13 @@ export class AdsenseComponent implements OnInit, AfterViewInit, OnDestroy {
     this.layout = use(this.layout, config.layout);
     this.layoutKey = use(this.layoutKey, config.layoutKey);
     this.pageLevelAds = use(this.pageLevelAds, config.pageLevelAds);
-    this.timeOutRetry = use(this.timeOutRetry, config.timeOutRetry || 200);
     this.adtest = use(this.adtest, config.adtest);
-    this.fullWidthResponsive = use(this.fullWidthResponsive, config.fullWidthResponsive);
+    this.fullWidthResponsive = use(
+      this.fullWidthResponsive,
+      config.fullWidthResponsive
+    );
   }
-  ngOnDestroy() {
+  ngOnDestroy(): void {
     const iframe = this.ins.nativeElement.querySelector('iframe');
     if (iframe && iframe.contentWindow) {
       iframe.src = 'about:blank';
@@ -93,31 +99,21 @@ export class AdsenseComponent implements OnInit, AfterViewInit, OnDestroy {
     }
   }
 
-  /**
-   * attempts to push the ad twice. Usually if one doesn't work the other
-   * will depeding on if the browser has the adsense code cached and
-   * if its the first page to be loaded
-   */
-  ngAfterViewInit() {
-    const res = this.push();
-    if (res instanceof TypeError) {
-      setTimeout(() => this.push(), this.timeOutRetry);
+  ngAfterViewInit(): void {
+    if (isPlatformBrowser(this.platform)) {
+      this.push();
     }
   }
 
-  push() {
+  push(): void {
     const p: any = {};
     if (this.pageLevelAds) {
       p.google_ad_client = this.adClient;
       p.enable_page_level_ads = true;
     }
-    try {
-      const adsbygoogle = (window as any).adsbygoogle;
-      adsbygoogle.push(p);
-      return true;
-    } catch (e) {
-      return e;
+
+    if (window) {
+      ((window as any).adsbygoogle = (window as any).adsbygoogle || []).push(p);
     }
   }
 }
-
