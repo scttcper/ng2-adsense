@@ -113,7 +113,11 @@ export class AdsenseComponent implements OnInit, AfterViewInit, OnDestroy {
     }
 
     if (window) {
-      ((window as any).adsbygoogle = (window as any).adsbygoogle || []).push(p);
+      try {
+        ((window as any).adsbygoogle = (window as any).adsbygoogle || []).push(p);
+      } catch {
+        // pass
+      }
     }
   }
 }
