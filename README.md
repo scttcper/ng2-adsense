@@ -64,20 +64,21 @@ Uses global defaults which can be overriden via inputs
 
 ## Inputs
 
-| input        | type          | description                                                           |
-| ------------ | ------------- | --------------------------------------------------------------------- |
-| adClient     | string        | account ca-pub-XXXXXXXXXXXXXXXX                                       |
-| adSlot       | string/number | ad slot/number                                                        |
-| adFormat     | string        | adsense ad format                                                     |
-| adRegion     | string        | older adsense code to make all ads on page the same                   |
-| display      | string        | element display style                                                 |
-| height       | number        | element height in px                                                  |
-| width        | number        | element width in px                                                   |
-| layout       | string        | used for in-feed ads                                                  |
-| layoutKey    | string        | used for in-feed ads                                                  |
-| pageLevelAds | boolean       | enable page-level ads                                                 |
-| adtest       | string        | sets up some sort of google test ad                                   |
-| className    | string        | add custom class names to the "ins" element                           |
+| input                 | type          | description                                                           |
+| ------------          | ------------- | --------------------------------------------------------------------- |
+| adClient              | string        | account ca-pub-XXXXXXXXXXXXXXXX                                       |
+| adSlot                | string/number | ad slot/number                                                        |
+| adFormat              | string        | adsense ad format                                                     |
+| adRegion              | string        | older adsense code to make all ads on page the same                   |
+| display               | string        | element display style                                                 |
+| fullWidthResponsive   | boolean       | enable full width responsive ad                                       | 
+| height                | number        | element height in px                                                  |
+| width                 | number        | element width in px                                                   |
+| layout                | string        | used for in-feed ads                                                  |
+| layoutKey             | string        | used for in-feed ads                                                  |
+| pageLevelAds          | boolean       | enable page-level ads                                                 |
+| adtest                | string        | sets up some sort of google test ad                                   |
+| className             | string        | add custom class names to the "ins" element                           |
 
 ```html
 <ng-adsense
