@@ -60,7 +60,7 @@ export class ReloadPageComponent implements OnInit {
 
   constructor(private route: ActivatedRoute) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.route.params.subscribe(params => {
       this.title = `Page ${params.id}`;
       this.loading = true;

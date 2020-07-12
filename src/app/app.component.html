@@ -13,19 +13,27 @@
           <h4 class="card-title">Demo</h4>
           <h6 class="card-subtitle mb-2 text-danger">Disable Adblock</h6>
           <p class="card-text">
-            Shows AdSense Ad loading on route change.
-            Sometimes a blank or identical AdSense ad is displayed.
+            Shows AdSense Ad loading on route change. Sometimes a blank or identical AdSense ad is
+            displayed.
           </p>
           <ul>
             <li><strong>Page 1</strong> - responsive ads</li>
             <li><strong>Page 2</strong> - ads with specified width</li>
-            <li><strong>Page 3 and 4</strong> - same component but w/ setTimeout when the params are changed
-            to refresh the ads</li>
+            <li>
+              <strong>Page 3 and 4</strong> - same component but w/ setTimeout when the params are
+              changed to refresh the ads
+            </li>
           </ul>
-          <hr>
+          <hr />
           <ul class="nav nav-pills nav-fill">
             <li class="nav-item">
-              <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Page 1</a>
+              <a
+                class="nav-link"
+                routerLink="/"
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }"
+                >Page 1</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link" routerLink="/2" routerLinkActive="active">Page 2</a>
@@ -37,8 +45,8 @@
               <a class="nav-link" routerLink="/ads/4" routerLinkActive="active">Page 4</a>
             </li>
           </ul>
-          <hr>
-          <div class="mt-3" style="min-height:220px">
+          <hr />
+          <div class="mt-3" style="min-height: 220px;">
             <router-outlet></router-outlet>
           </div>
         </div>
@@ -51,10 +59,10 @@
   <div class="container text-center pt-3 pb-3">
     <small class="text-muted">
       Demo using Angular {{ version.full }}
-      <br>
+      <br />
       Not affiliated with Google AdSense
     </small>
-    <br>
+    <br />
     <small class="text-muted">
       <a href="https://github.com/scttcper/ng2-adsense/">GitHub</a>
     </small>
