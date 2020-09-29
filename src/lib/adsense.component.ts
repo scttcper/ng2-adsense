@@ -68,6 +68,7 @@ export class AdsenseComponent implements OnInit, AfterViewInit, OnDestroy {
 
   constructor(
     @Inject(ADSENSE_TOKEN) private config: AdsenseConfig,
+    // tslint:disable-next-line:no-any
     @Inject(PLATFORM_ID) private platform: any,
   ) {}
 
