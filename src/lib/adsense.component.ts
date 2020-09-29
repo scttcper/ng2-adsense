@@ -68,7 +68,7 @@ export class AdsenseComponent implements OnInit, AfterViewInit, OnDestroy {
 
   constructor(
     @Inject(ADSENSE_TOKEN) private config: AdsenseConfig,
-    @Inject(PLATFORM_ID) private platform: typeof PLATFORM_ID,
+    @Inject(PLATFORM_ID) private platform: any,
   ) {}
 
   ngOnInit(): void {
