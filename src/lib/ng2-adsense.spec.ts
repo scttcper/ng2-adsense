@@ -1,4 +1,4 @@
-import { async, TestBed } from '@angular/core/testing';
+import { TestBed, waitForAsync } from '@angular/core/testing';
 
 import { AdsenseComponent } from './adsense.component';
 import { AdsenseModule } from './adsense.module';
@@ -9,13 +9,13 @@ describe('AdsenseComponent', () => {
     adSlot: 2930227358,
     layout: 'z1',
   };
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [AdsenseModule.forRoot(options)],
     }).compileComponents();
   }));
 
-  it('should render ng adsense', async(() => {
+  it('should render ng adsense', waitForAsync(() => {
     const fixture = TestBed.createComponent(AdsenseComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;

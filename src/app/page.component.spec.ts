@@ -1,4 +1,4 @@
-import { async, TestBed } from '@angular/core/testing';
+import { TestBed, waitForAsync } from '@angular/core/testing';
 
 import { AdsenseModule } from '../lib/public_api';
 
@@ -23,7 +23,7 @@ describe('PageComponent', () => {
 
   it(
     'should create the app',
-    async(() => {
+    waitForAsync(() => {
       const fixture = TestBed.createComponent(PageComponent);
       const app = fixture.debugElement.componentInstance;
       expect(app).toBeTruthy();
@@ -32,7 +32,7 @@ describe('PageComponent', () => {
 
   it(
     `should have as title 'Page 1'`,
-    async(() => {
+    waitForAsync(() => {
       const fixture = TestBed.createComponent(PageComponent);
       const app = fixture.debugElement.componentInstance;
       expect(app.title).toEqual('Page 1');
@@ -41,7 +41,7 @@ describe('PageComponent', () => {
 
   it(
     'should render ng adsense',
-    async(() => {
+    waitForAsync(() => {
       const fixture = TestBed.createComponent(PageComponent);
       fixture.detectChanges();
       const compiled = fixture.debugElement.nativeElement;
@@ -74,7 +74,7 @@ describe('OtherPageComponent', () => {
 
   it(
     'should create the app',
-    async(() => {
+    waitForAsync(() => {
       const fixture = TestBed.createComponent(OtherPageComponent);
       const app = fixture.debugElement.componentInstance;
       expect(app).toBeTruthy();
@@ -83,7 +83,7 @@ describe('OtherPageComponent', () => {
 
   it(
     `should have as title 'Page 2'`,
-    async(() => {
+    waitForAsync(() => {
       const fixture = TestBed.createComponent(OtherPageComponent);
       const app = fixture.debugElement.componentInstance;
       expect(app.title).toEqual('Page 2');
@@ -92,7 +92,7 @@ describe('OtherPageComponent', () => {
 
   it(
     'should render ng adsense',
-    async(() => {
+    waitForAsync(() => {
       const fixture = TestBed.createComponent(OtherPageComponent);
       fixture.detectChanges();
       const compiled = fixture.debugElement.nativeElement;
