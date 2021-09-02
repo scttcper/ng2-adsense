@@ -1,5 +1,6 @@
+/* eslint-disable @typescript-eslint/member-ordering */
 // This file is required by karma.conf.js and loads recursively all the .spec and framework files
-/* eslint-disable import/order */
+
 import 'zone.js/testing';
 import { getTestBed } from '@angular/core/testing';
 import {
@@ -8,11 +9,7 @@ import {
 } from '@angular/platform-browser-dynamic/testing';
 
 declare const require: {
-  context(
-    path: string,
-    deep?: boolean,
-    filter?: RegExp
-  ): {
+  context(path: string, deep?: boolean, filter?: RegExp): {
     keys(): string[];
     <T>(id: string): T;
   };
@@ -22,7 +19,9 @@ declare const require: {
 getTestBed().initTestEnvironment(
   BrowserDynamicTestingModule,
   platformBrowserDynamicTesting(),
+  { teardown: { destroyAfterEach: true }},
 );
+
 // Then we find all the tests.
 const context = require.context('./', true, /\.spec\.ts$/);
 // And load the modules.
