@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-  node: circleci/node@4
+  node: circleci/node@5
   browser-tools: circleci/browser-tools@1
   codecov: codecov/codecov@3
 jobs:
@@ -26,7 +26,7 @@ jobs:
       tag: 'current'
     steps:
       - checkout
-      - run: npm ci
+      - node/install-packages
       - run: npm run build
       - run: cd dist && npx semantic-release
 
