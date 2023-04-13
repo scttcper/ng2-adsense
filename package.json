@@ -18,22 +18,22 @@
     "lint:fix": "ng lint --fix"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "14.0.1",
+    "@angular-devkit/build-angular": "15.2.6",
     "@angular-eslint/builder": "13.2.1",
     "@angular-eslint/eslint-plugin": "13.2.1",
     "@angular-eslint/eslint-plugin-template": "13.2.1",
     "@angular-eslint/template-parser": "13.2.1",
-    "@angular/animations": "14.0.1",
-    "@angular/cli": "14.0.1",
-    "@angular/common": "14.0.1",
-    "@angular/compiler": "14.0.1",
-    "@angular/compiler-cli": "14.0.1",
-    "@angular/core": "14.0.1",
-    "@angular/forms": "14.0.1",
-    "@angular/language-service": "14.0.1",
-    "@angular/platform-browser": "14.0.1",
-    "@angular/platform-browser-dynamic": "14.0.1",
-    "@angular/router": "14.0.1",
+    "@angular/animations": "15.2.7",
+    "@angular/cli": "15.2.6",
+    "@angular/common": "15.2.7",
+    "@angular/compiler": "15.2.7",
+    "@angular/compiler-cli": "15.2.7",
+    "@angular/core": "15.2.7",
+    "@angular/forms": "15.2.7",
+    "@angular/language-service": "15.2.7",
+    "@angular/platform-browser": "15.2.7",
+    "@angular/platform-browser-dynamic": "15.2.7",
+    "@angular/router": "15.2.7",
     "@types/jasmine": "4.0.3",
     "@types/node": "17.0.41",
     "@typescript-eslint/eslint-plugin": "5.27.1",
@@ -53,10 +53,10 @@
     "karma-coverage-istanbul-reporter": "3.0.3",
     "karma-jasmine": "5.0.1",
     "karma-jasmine-html-reporter": "2.0.0",
-    "ng-packagr": "14.0.0",
+    "ng-packagr": "15.2.2",
     "rxjs": "7.5.5",
     "tslib": "2.4.0",
-    "typescript": "4.6.3",
+    "typescript": "4.9.5",
     "zone.js": "0.11.5"
   },
   "engines": {
@@ -64,6 +64,8 @@
     "node": ">= 16"
   },
   "release": {
-    "branches": ["master"]
+    "branches": [
+      "master"
+    ]
   }
 }
