@@ -2,7 +2,7 @@ coverage:
   range: "50..100"
   status:
     project: no
-    patch: no
+    patch: false
 comment:
-  require_changes: yes
+  require_changes: true
   behavior: once
