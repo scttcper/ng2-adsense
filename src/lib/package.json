@@ -11,7 +11,7 @@
   },
   "homepage": "https://github.com/scttcper/ng2-adsense",
   "peerDependencies": {
-    "@angular/core": ">=14.0.0-0",
-    "@angular/common": ">=14.0.0-0"
+    "@angular/core": ">=15.0.0-0",
+    "@angular/common": ">=15.0.0-0"
   }
 }
