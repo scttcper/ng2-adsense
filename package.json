@@ -12,7 +12,7 @@
     "ghpages": "ng build --configuration production --no-progress",
     "test": "ng test --no-watch --browsers=ChromeCI",
     "test:watch": "ng test --browsers=ChromeCI",
-    "test:ci": "ng test --no-watch --code-coverage --no-progress",
+    "test:ci": "ng test --watch=false --code-coverage --no-progress --browsers=ChromeHeadlessCustom",
     "lint": "ng lint",
     "lint:fix": "ng lint --fix"
   },
