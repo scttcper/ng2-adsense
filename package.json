@@ -53,6 +53,7 @@
     "karma-jasmine-html-reporter": "2.0.0",
     "ng-packagr": "16.0.1",
     "postcss": "^8.4.23",
+    "puppeteer": "^20.2.0",
     "rxjs": "7.8.1",
     "tailwindcss": "^3.3.2",
     "tslib": "2.5.0",
