@@ -68,7 +68,6 @@ export class AdsenseComponent implements OnInit, AfterViewInit, OnDestroy {
 
   constructor(
     @Inject(ADSENSE_TOKEN) private config: AdsenseConfig,
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     @Inject(PLATFORM_ID) private platform: any,
   ) {}
 
@@ -109,7 +108,6 @@ export class AdsenseComponent implements OnInit, AfterViewInit, OnDestroy {
 
     if (window) {
       try {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         ((window as any).adsbygoogle = (window as any).adsbygoogle || []).push(p);
       } catch {
         // pass
