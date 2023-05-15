@@ -2,8 +2,6 @@
 
 [npm-image]: https://img.shields.io/npm/v/ng2-adsense.svg
 [npm-url]: https://npmjs.org/package/ng2-adsense
-[circle-img]: https://circleci.com/gh/scttcper/ng2-adsense.svg?style=svg
-[circle-url]: https://circleci.com/gh/scttcper/ng2-adsense
 [coverage-img]: https://codecov.io/gh/scttcper/ng2-adsense/branch/master/graph/badge.svg
 [coverage-url]: https://codecov.io/gh/scttcper/ng2-adsense
 
@@ -29,7 +27,8 @@ Latest version available for each version of Angular
 | 9.1.0       | 10.x 11.x   |
 | 10.1.0      | 12.x 13.x   |
 | 11.0.0      | 14.x        |
-| current     | >=15        |
+| 12.0.0      | 15.x        |
+| current     | >=16        |
 
 ## Use
 
