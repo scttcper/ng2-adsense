@@ -11,7 +11,7 @@
 
 ## Install
 
-```bash
+```
 npm install ng2-adsense
 ```
 
