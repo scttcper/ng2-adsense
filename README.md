@@ -1,4 +1,4 @@
-# ng2-adsense [![NPM version][npm-image]][npm-url] [![build status][circle-img]][circle-url] [![coverage status][coverage-img]][coverage-url]
+# ng2-adsense [![NPM version][npm-image]][npm-url][![coverage status][coverage-img]][coverage-url]
 
 [npm-image]: https://img.shields.io/npm/v/ng2-adsense.svg
 [npm-url]: https://npmjs.org/package/ng2-adsense
@@ -28,7 +28,8 @@ Latest version available for each version of Angular
 | 10.1.0      | 12.x 13.x   |
 | 11.0.0      | 14.x        |
 | 12.0.0      | 15.x        |
-| current     | >=16        |
+| 13.0.0      | 16.x        |
+| current     | >=17        |
 
 ## Use
 
