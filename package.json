@@ -61,7 +61,8 @@
     "zone.js": "0.14.4"
   },
   "engines": {
-    "node": ">=16"
+    "node": ">=18",
+    "pnpm": ">=9"
   },
   "release": {
     "branches": [
